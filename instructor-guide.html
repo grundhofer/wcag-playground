@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Guide - TechFlow Digital Accessibility Testing</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .issue { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 10px 0; }
+        .correct { background: #d4edda; border-left: 4px solid #28a745; padding: 15px; margin: 10px 0; }
+        .criterion { font-weight: bold; color: #dc3545; }
+        .page-location { font-style: italic; color: #6c757d; }
+        details { margin: 15px 0; border: 1px solid #dee2e6; border-radius: 5px; }
+        summary { padding: 15px; background: #f8f9fa; font-weight: bold; cursor: pointer; }
+        details[open] summary { border-bottom: 1px solid #dee2e6; }
+        details > div { padding: 15px; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="images/logo.svg" alt="TechFlow Digital" width="60" height="40">
+                <span class="brand-text">TechFlow Digital - Instructor Guide</span>
+            </div>
+        </div>
+    </header>
+
+    <main style="margin-top: 100px; padding: 2rem 0;">
+        <div class="container">
+            <h1>WCAG 2.2 Testing Guide</h1>
+            <p class="lead">This guide helps instructors identify the subtle accessibility issues embedded throughout the TechFlow Digital website. The site appears to be a normal business website but contains carefully placed WCAG violations for educational purposes.</p>
+
+            <section style="margin: 3rem 0;">
+                <h2>Overview</h2>
+                <p>The TechFlow Digital website simulates a realistic digital agency with embedded accessibility issues. Unlike obvious testing sites, these issues are subtle and require actual testing to discover - just like real-world accessibility auditing.</p>
+                
+                <div class="correct">
+                    <strong>Teaching Approach:</strong> Encourage participants to use the same testing methods they would use on real client websites: keyboard navigation, screen readers, contrast checkers, and automated tools.
+                </div>
+            </section>
+
+            <section style="margin: 3rem 0;">
+                <h2>Homepage Issues (index.html)</h2>
+
+                <details>
+                    <summary>🏠 Navigation and Header Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 1.4.3 - Contrast (Minimum)</span><br>
+                            <span class="page-location">Navigation: Home link</span><br>
+                            The "Home" link in navigation uses #888 color (insufficient contrast ratio against dark background).
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.4.7 - Focus Visible</span><br>
+                            <span class="page-location">CSS styles, line 67-69</span><br>
+                            Focus indicators removed globally for links, buttons, and inputs via CSS.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 1.1.1 - Non-text Content</span><br>
+                            <span class="page-location">Header logo</span><br>
+                            Logo image missing alt attribute (just has width/height attributes).
+                        </div>
+
+                        <div class="correct">
+                            ✅ Navigation structure is properly implemented with semantic HTML.
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>🎯 Hero Section Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 1.4.3 - Contrast (Minimum)</span><br>
+                            <span class="page-location">Hero heading</span><br>
+                            Main heading "Transform Your Digital Presence" uses #b8b8b8 color (poor contrast).
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.1.1 - Keyboard</span><br>
+                            <span class="page-location">Get Started button</span><br>
+                            Implemented as div with onclick instead of button - not keyboard accessible.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 1.1.1 - Non-text Content</span><br>
+                            <span class="page-location">Hero background image</span><br>
+                            Hero image has background-image in style attribute but also inline background property.
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>🎛️ Services Preview Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.4.3 - Focus Order</span><br>
+                            <span class="page-location">Service cards</span><br>
+                            First service card has tabindex="0" creating illogical tab order.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 1.1.1 - Non-text Content</span><br>
+                            <span class="page-location">Service cards 2 & 3</span><br>
+                            Important service information displayed as CSS background colors without alternative text.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 4.1.2 - Name, Role, Value</span><br>
+                            <span class="page-location">Service card images</span><br>
+                            Some service images missing alt attributes.
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>💬 Testimonials Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.2.2 - Pause, Stop, Hide</span><br>
+                            <span class="page-location">JavaScript, line 47</span><br>
+                            Testimonials auto-advance every 4 seconds with no pause/stop control.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 4.1.3 - Status Messages</span><br>
+                            <span class="page-location">Testimonial changes</span><br>
+                            Testimonial changes not announced to screen readers (no ARIA live region).
+                        </div>
+
+                        <div class="correct">
+                            ✅ Testimonial content is properly structured with blockquote elements.
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>🔗 Footer Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.1.1 - Keyboard</span><br>
+                            <span class="page-location">Social media links</span><br>
+                            Social links implemented as divs with onclick - no keyboard access.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 3.2.2 - On Input</span><br>
+                            <span class="page-location">Newsletter form</span><br>
+                            Form submission triggers without explicit user action.
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>⏰ Timing Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.2.1 - Timing Adjustable</span><br>
+                            <span class="page-location">JavaScript, lines 318-323</span><br>
+                            30-minute session timeout with no warning or user control.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.2.2 - Pause, Stop, Hide</span><br>
+                            <span class="page-location">JavaScript, lines 167-177</span><br>
+                            Chat widget auto-appears after 5 seconds without user control.
+                        </div>
+                    </div>
+                </details>
+            </section>
+
+            <section style="margin: 3rem 0;">
+                <h2>Services Page Issues (services.html)</h2>
+
+                <details>
+                    <summary>📋 Form and Input Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 1.4.3 - Contrast (Minimum)</span><br>
+                            <span class="page-location">Cost estimate form</span><br>
+                            Form labels use #aaa color and form borders are #eee (insufficient contrast).
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 3.3.2 - Labels or Instructions</span><br>
+                            <span class="page-location">Form dropdowns</span><br>
+                            Select elements have placeholder-style options without proper labeling.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 4.1.3 - Status Messages</span><br>
+                            <span class="page-location">Cost calculation</span><br>
+                            Estimate updates not announced to screen readers.
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>🎯 Interactive Elements Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.5.8 - Target Size (Minimum)</span><br>
+                            <span class="page-location">Strategy cards</span><br>
+                            "Learn More" buttons have tiny click targets (tiny-click-target class).
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.4.3 - Focus Order</span><br>
+                            <span class="page-location">Process steps</span><br>
+                            Process steps have tabindex values creating illogical tab order (3, 1, 2, none).
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 1.3.1 - Info and Relationships</span><br>
+                            <span class="page-location">Technology stack</span><br>
+                            Important frontend technology information displayed as background image.
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>🔍 Modal Dialog Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.1.2 - No Keyboard Trap</span><br>
+                            <span class="page-location">Quote modal</span><br>
+                            Modal lacks proper focus management and keyboard trap.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 3.2.2 - On Input</span><br>
+                            <span class="page-location">Budget inputs</span><br>
+                            Auto-advance inputs (class="auto-advance") change context unexpectedly.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 4.1.2 - Name, Role, Value</span><br>
+                            <span class="page-location">Modal structure</span><br>
+                            Modal missing proper ARIA attributes (role, aria-modal, aria-labelledby).
+                        </div>
+                    </div>
+                </details>
+            </section>
+
+            <section style="margin: 3rem 0;">
+                <h2>Contact Page Issues (contact.html)</h2>
+
+                <details>
+                    <summary>📝 Form Structure Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 1.3.1 - Info and Relationships</span><br>
+                            <span class="page-location">Personal information section</span><br>
+                            Related form fields not grouped with fieldset/legend.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 3.3.2 - Labels or Instructions</span><br>
+                            <span class="page-location">Name fields</span><br>
+                            First/last name inputs use placeholder text instead of proper labels.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 1.3.5 - Identify Input Purpose</span><br>
+                            <span class="page-location">Email and phone inputs</span><br>
+                            Missing autocomplete attributes for personal information.
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>🎛️ Custom Controls Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 4.1.2 - Name, Role, Value</span><br>
+                            <span class="page-location">Custom dropdown</span><br>
+                            "How did you hear about us?" dropdown missing ARIA attributes.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.1.1 - Keyboard</span><br>
+                            <span class="page-location">Custom dropdown</span><br>
+                            Dropdown not keyboard navigable - only mouse/touch interaction.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 4.1.3 - Status Messages</span><br>
+                            <span class="page-location">Range slider</span><br>
+                            Budget range slider value not communicated to screen readers.
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>🎨 Color and Visual Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 1.4.1 - Use of Color</span><br>
+                            <span class="page-location">Business hours</span><br>
+                            Operating hours indicated only by color (green=open, yellow=limited, red=closed).
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 1.4.3 - Contrast (Minimum)</span><br>
+                            <span class="page-location">Various labels</span><br>
+                            Multiple form labels use #aaa color (insufficient contrast).
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.1.1 - Keyboard</span><br>
+                            <span class="page-location">Social media buttons</span><br>
+                            Social media "buttons" implemented as divs with onclick handlers.
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>⚡ Form Behavior Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 3.2.2 - On Input</span><br>
+                            <span class="page-location">Newsletter checkbox</span><br>
+                            Newsletter auto-subscribes when checked without explicit submission.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 3.3.4 - Error Prevention</span><br>
+                            <span class="page-location">Clear All button</span><br>
+                            Destructive "Clear All" action without confirmation dialog.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.2.2 - Pause, Stop, Hide</span><br>
+                            <span class="page-location">Response time updates</span><br>
+                            Response time automatically updates every 5 seconds without pause control.
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>🗺️ Alternative Content Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 1.1.1 - Non-text Content</span><br>
+                            <span class="page-location">Office location map</span><br>
+                            Interactive map placeholder lacks proper alternative description.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 1.4.1 - Use of Color</span><br>
+                            <span class="page-location">Map instructions</span><br>
+                            Map interaction instructions rely only on color coding.
+                        </div>
+                    </div>
+                </details>
+            </section>
+
+            <section style="margin: 3rem 0;">
+                <h2>Global JavaScript Issues</h2>
+
+                <details>
+                    <summary>⏰ Timing and Auto-behavior Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.2.1 - Timing Adjustable</span><br>
+                            <span class="page-location">scripts.js, lines 318-323</span><br>
+                            Session timeout after 30 minutes with no warning or extension option.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.2.2 - Pause, Stop, Hide</span><br>
+                            <span class="page-location">scripts.js, lines 47, 167-177</span><br>
+                            Multiple auto-updating/moving content without pause controls.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.3.1 - Three Flashes or Below</span><br>
+                            <span class="page-location">scripts.js, lines 326-334</span><br>
+                            Performance indicator flashes every 100ms (could trigger seizures).
+                        </div>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>🔧 Interaction Issues</summary>
+                    <div>
+                        <div class="issue">
+                            <span class="criterion">WCAG 4.1.3 - Status Messages</span><br>
+                            <span class="page-location">Multiple functions</span><br>
+                            Status changes, notifications, and updates not announced to screen readers.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.4.3 - Focus Order</span><br>
+                            <span class="page-location">scripts.js, lines 78-95</span><br>
+                            Modal dialogs don't manage focus properly when opened/closed.
+                        </div>
+
+                        <div class="issue">
+                            <span class="criterion">WCAG 2.5.7 - Dragging Movements</span><br>
+                            <span class="page-location">scripts.js, lines 219-249</span><br>
+                            Drag and drop functionality without keyboard alternatives.
+                        </div>
+                    </div>
+                </details>
+            </section>
+
+            <section style="margin: 3rem 0;">
+                <h2>Testing Instructions for Participants</h2>
+
+                <div style="background: #f8f9fa; padding: 2rem; border-radius: 8px;">
+                    <h3>Recommended Testing Approach</h3>
+                    <ol style="margin: 1rem 0;">
+                        <li><strong>Keyboard Navigation:</strong> Tab through entire site, check focus visibility and logical order</li>
+                        <li><strong>Screen Reader Testing:</strong> Use NVDA, JAWS, VoiceOver, or ORCA to identify missing announcements</li>
+                        <li><strong>Contrast Analysis:</strong> Use browser dev tools or contrast checker extensions</li>
+                        <li><strong>Form Testing:</strong> Test all forms for proper labeling, error handling, and required field indicators</li>
+                        <li><strong>Timing Testing:</strong> Look for auto-updating content, timeouts, and moving elements</li>
+                        <li><strong>Zoom Testing:</strong> Test at 200% zoom for reflow and text scaling issues</li>
+                        <li><strong>Automated Scanning:</strong> Run axe or WAVE to catch obvious issues</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section style="margin: 3rem 0;">
+                <h2>Teaching Notes</h2>
+
+                <div class="correct" style="margin: 1rem 0;">
+                    <strong>Realistic Simulation:</strong> These issues mirror real-world mistakes developers make. Emphasize that accessibility testing is an ongoing process, not a one-time check.
+                </div>
+
+                <div style="background: #e7f3ff; padding: 1.5rem; border-left: 4px solid #007bff; margin: 1rem 0;">
+                    <strong>Progressive Disclosure:</strong> Start with obvious issues (keyboard navigation, contrast) then move to subtle ones (ARIA implementation, status messages).
+                </div>
+
+                <div style="background: #fff0e6; padding: 1.5rem; border-left: 4px solid #fd7e14; margin: 1rem 0;">
+                    <strong>Mixed Examples:</strong> Point out both correct and incorrect implementations. This website contains both - just like real sites where some things are accessible and others aren't.
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <p>&copy; 2024 TechFlow Digital Accessibility Training</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

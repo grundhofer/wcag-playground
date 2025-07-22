@@ -1,0 +1,6 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#fff" stroke="#ddd"/>
+  <polyline points="20,180 80,120 140,100 200,60 260,80" 
+            fill="none" stroke="#3498db" stroke-width="3"/>
+  <text x="150" y="20" text-anchor="middle" fill="#333" font-size="14" font-family="Arial">Sales Chart</text>
+</svg>

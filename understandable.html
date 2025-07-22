@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understandable - WCAG Testing</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="#main" class="visually-hidden">Skip to main content</a>
+    
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="WCAG Testing Logo" width="50" height="50">
+            <h1>Principle 3: Understandable</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="perceivable.html">Perceivable</a></li>
+                <li><a href="operable.html">Operable</a></li>
+                <li><a href="understandable.html" aria-current="page">Understandable</a></li>
+                <li><a href="robust.html">Robust</a></li>
+                <li><a href="complex-scenarios.html">Complex Scenarios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section>
+            <h2>3.1.1 Language of Page</h2>
+            <div class="test-area">
+                <!-- Issue already present: html element missing lang attribute at top -->
+                <p>This page is missing the language declaration in the HTML element.</p>
+                
+                <!-- Correct example -->
+                <p>Proper pages would have &lt;html lang="en"&gt; declared.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.1.2 Language of Parts</h2>
+            <div class="test-area">
+                <!-- Issue: Foreign language content without lang attribute -->
+                <blockquote>
+                    <p>Bonjour et bienvenue sur notre site web. Nous espérons que vous trouverez les informations que vous cherchez.</p>
+                </blockquote>
+                
+                <!-- Issue: Mixed languages -->
+                <p>Visit our café for the best ristretto in town!</p>
+                
+                <!-- Correct: Language marked -->
+                <blockquote lang="fr">
+                    <p>Voici un exemple correct avec la déclaration de langue.</p>
+                </blockquote>
+                
+                <!-- Correct: Specific terms marked -->
+                <p>Our <span lang="it">espresso</span> is made with authentic Italian beans.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.2.1 On Focus</h2>
+            <div class="test-area">
+                <!-- Issue: Context change on focus -->
+                <input type="text" placeholder="Focus triggers redirect" 
+                       onfocus="setTimeout(() => window.location.hash = '#newlocation', 1000)">
+                
+                <!-- Issue: Focus opens new window -->
+                <a href="http://example.com" target="_blank" 
+                   onfocus="if (!this.dataset.warned) { this.dataset.warned = true; window.open('popup.html'); }">
+                   Link that opens popup on focus
+                </a>
+                
+                <!-- Correct: Focus doesn't change context -->
+                <input type="text" placeholder="Safe focus behavior">
+            </div>
+        </section>
+
+        <section>
+            <h2>3.2.2 On Input</h2>
+            <div class="test-area">
+                <!-- Issue: Auto-submit on change -->
+                <form>
+                    <label for="autoSubmit">Select option (auto-submits):</label>
+                    <select id="autoSubmit" onchange="this.form.submit()">
+                        <option value="">Choose...</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </select>
+                </form>
+                
+                <!-- Issue: Input that changes page content -->
+                <input type="checkbox" onchange="document.getElementById('hiddenContent').style.display = this.checked ? 'block' : 'none'">
+                <label>Check to reveal surprise content</label>
+                <div id="hiddenContent" style="display: none;">
+                    <h3>Surprise! New content appeared!</h3>
+                </div>
+                
+                <!-- Correct: Button to submit -->
+                <form>
+                    <label for="safeSelect">Safe selection:</label>
+                    <select id="safeSelect">
+                        <option value="">Choose...</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </select>
+                    <button type="submit">Submit Choice</button>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.2.3 Consistent Navigation</h2>
+            <div class="test-area">
+                <!-- Issue: Different navigation order (simulated) -->
+                <div style="border: 2px solid orange; padding: 10px;">
+                    <p><strong>Navigation on other pages:</strong></p>
+                    <nav>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Products</a></li>
+                        </ul>
+                    </nav>
+                    
+                    <p><strong>Navigation on this page (different order):</strong></p>
+                    <nav>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Products</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.2.4 Consistent Identification</h2>
+            <div class="test-area">
+                <!-- Issue: Inconsistent labeling -->
+                <form>
+                    <div class="form-group">
+                        <label for="email1">Email Address:</label>
+                        <input type="email" id="email1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email2">E-mail:</label>
+                        <input type="email" id="email2">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email3">Electronic mail:</label>
+                        <input type="email" id="email3">
+                    </div>
+                </form>
+                
+                <!-- Issue: Inconsistent button text for same function -->
+                <div style="margin-top: 20px;">
+                    <button onclick="saveData()">Save</button>
+                    <button onclick="saveData()" style="margin-left: 20px;">Store Data</button>
+                    <button onclick="saveData()" style="margin-left: 20px;">Keep Changes</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.2.6 Consistent Help</h2>
+            <div class="test-area">
+                <!-- Issue: Help in different locations -->
+                <div style="border: 1px solid #ddd; padding: 20px; margin-bottom: 20px;">
+                    <h4>Page 1 Layout</h4>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span>Content</span>
+                        <a href="#">Help</a>
+                    </div>
+                </div>
+                
+                <div style="border: 1px solid #ddd; padding: 20px;">
+                    <h4>Page 2 Layout (inconsistent help location)</h4>
+                    <div>
+                        <a href="#">Help</a>
+                        <div style="margin-top: 10px;">Content</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.3.1 Error Identification</h2>
+            <div class="test-area">
+                <form id="errorForm">
+                    <!-- Issue: Error not clearly identified -->
+                    <div class="form-group">
+                        <label for="badName">Name:</label>
+                        <input type="text" id="badName" required style="border: 1px solid red;">
+                        <div style="color: red; font-size: 12px;">Invalid</div>
+                    </div>
+                    
+                    <!-- Issue: Generic error message -->
+                    <div class="form-group">
+                        <label for="badEmail">Email:</label>
+                        <input type="email" id="badEmail" required value="invalid-email">
+                        <div class="error-message">Error</div>
+                    </div>
+                    
+                    <!-- Correct: Clear error identification -->
+                    <div class="form-group">
+                        <label for="goodEmail">Email (correct example):</label>
+                        <input type="email" id="goodEmail" required>
+                        <div id="goodEmail-error" class="error-message" style="display: none;">
+                            Please enter a valid email address in the format name@domain.com
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.3.2 Labels or Instructions</h2>
+            <div class="test-area">
+                <form>
+                    <!-- Issue: No label -->
+                    <input type="text" placeholder="Enter your name" required>
+                    
+                    <!-- Issue: Unclear requirements -->
+                    <div class="form-group">
+                        <label for="password1">Password:</label>
+                        <input type="password" id="password1" required>
+                    </div>
+                    
+                    <!-- Issue: Ambiguous format -->
+                    <div class="form-group">
+                        <label for="date1">Date:</label>
+                        <input type="text" id="date1">
+                    </div>
+                    
+                    <!-- Correct: Clear labels and instructions -->
+                    <div class="form-group">
+                        <label for="password2">Password:</label>
+                        <input type="password" id="password2" required 
+                               aria-describedby="pwd-help">
+                        <div id="pwd-help">Must be at least 8 characters with one number</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date2">Date (MM/DD/YYYY):</label>
+                        <input type="text" id="date2" placeholder="MM/DD/YYYY">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.3.3 Error Suggestion</h2>
+            <div class="test-area">
+                <form id="suggestionForm">
+                    <!-- Issue: Error without suggestion -->
+                    <div class="form-group">
+                        <label for="zipcode1">ZIP Code:</label>
+                        <input type="text" id="zipcode1" value="123" maxlength="5">
+                        <div class="error-message">Invalid ZIP code</div>
+                    </div>
+                    
+                    <!-- Correct: Error with helpful suggestion -->
+                    <div class="form-group">
+                        <label for="zipcode2">ZIP Code (with suggestion):</label>
+                        <input type="text" id="zipcode2" maxlength="5">
+                        <div id="zip-error" class="error-message" style="display: none;">
+                            Please enter a 5-digit ZIP code (e.g., 12345)
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.3.4 Error Prevention</h2>
+            <div class="test-area">
+                <!-- Issue: No confirmation for important action -->
+                <form>
+                    <h4>Delete Account</h4>
+                    <p>This will permanently delete your account and all data.</p>
+                    <button type="button" style="background-color: #e74c3c; color: white; padding: 10px 20px;">
+                        Delete Account Forever
+                    </button>
+                </form>
+                
+                <!-- Correct: Confirmation required -->
+                <form style="margin-top: 30px;">
+                    <h4>Transfer Funds (with confirmation)</h4>
+                    <label for="amount">Amount: $</label>
+                    <input type="number" id="amount" step="0.01">
+                    <br><br>
+                    <label>
+                        <input type="checkbox" required>
+                        I confirm this transfer of funds
+                    </label>
+                    <br><br>
+                    <button type="submit">Transfer Money</button>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.3.7 Redundant Entry</h2>
+            <div class="test-area">
+                <!-- Issue: User must re-enter previously entered data -->
+                <form>
+                    <h4>Step 1: Shipping Address</h4>
+                    <input type="text" placeholder="Street Address">
+                    <input type="text" placeholder="City">
+                    <button type="button" onclick="showBilling()">Continue to Billing</button>
+                </form>
+                
+                <form id="billingForm" style="display: none; margin-top: 20px;">
+                    <h4>Step 2: Billing Address</h4>
+                    <label>
+                        <input type="checkbox"> Same as shipping address
+                    </label>
+                    <input type="text" placeholder="Street Address">
+                    <input type="text" placeholder="City">
+                </form>
+                
+                <script>
+                    function showBilling() {
+                        document.getElementById('billingForm').style.display = 'block';
+                    }
+                </script>
+            </div>
+        </section>
+
+        <section>
+            <h2>3.3.8 Accessible Authentication</h2>
+            <div class="test-area">
+                <!-- Issue: CAPTCHA without alternative -->
+                <form>
+                    <h4>Login Form</h4>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username">
+                    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password">
+                    
+                    <div style="margin: 10px 0;">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjUwIj48dGV4dCB4PSI1IiB5PSIzMCI+SDRSRDE8L3RleHQ+PC9zdmc+" alt="CAPTCHA">
+                        <input type="text" placeholder="Enter CAPTCHA">
+                    </div>
+                    
+                    <button type="submit">Login</button>
+                </form>
+                
+                <!-- Correct: Alternative authentication -->
+                <form style="margin-top: 30px;">
+                    <h4>Login with Accessible Authentication</h4>
+                    <label for="username2">Username:</label>
+                    <input type="text" id="username2">
+                    
+                    <label for="password2">Password:</label>
+                    <input type="password" id="password2">
+                    
+                    <div style="margin: 10px 0;">
+                        <label>Security Question: What is 2 + 3?</label>
+                        <input type="text" placeholder="Enter answer">
+                    </div>
+                    
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 WCAG Testing Playground | Understandable Principle Tests</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - TechFlow Digital</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="images/logo.svg" alt="TechFlow Digital" width="60" height="40">
+                <span class="brand-text">TechFlow Digital</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" aria-current="page" style="color: #888;">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="margin-top: 80px;">
+        <section class="hero" style="min-height: 400px;">
+            <div class="hero-content">
+                <h1 style="color: #ccc;">Our Services</h1>
+                <p>Comprehensive digital solutions tailored to your business needs</p>
+                <div onclick="scrollToServices()" class="cta-button primary">
+                    Explore Our Work
+                </div>
+            </div>
+        </section>
+
+        <section class="services-detail" style="padding: 4rem 0;">
+            <div class="container">
+                <div class="service-category">
+                    <h2>Web Development</h2>
+                    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
+                        <div>
+                            <img src="images/service-web.svg" alt="">
+                            <div style="margin-top: 1rem;">
+                                <span class="status-indicator status-active"></span>
+                                <span style="color: #27ae60;">Available Now</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Custom Web Applications</h3>
+                            <p>We build modern, responsive web applications using the latest technologies. Our team specializes in React, Vue.js, and Node.js development.</p>
+                            
+                            <div style="margin: 2rem 0;">
+                                <h4>Features Include:</h4>
+                                <ul>
+                                    <li>Responsive design for all devices</li>
+                                    <li>SEO optimization</li>
+                                    <li>Performance optimization</li>
+                                    <li style="color: #e74c3c;">Fast turnaround times</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="pricing">
+                                <p><strong>Starting at $5,000</strong></p>
+                                <button onclick="TechFlow.requestQuote('web-development')" class="btn btn-primary">
+                                    Get Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-category">
+                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
+                        <div>
+                            <h3>Mobile Applications</h3>
+                            <p>Native iOS and Android apps, plus cross-platform solutions using React Native and Flutter.</p>
+                            
+                            <!-- Issue: Poor contrast and form submission -->
+                            <form onsubmit="return false;" style="margin: 2rem 0; padding: 1.5rem; background: #f9f9f9; border-radius: 8px;">
+                                <h4>Quick Cost Estimate</h4>
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                    <div>
+                                        <label style="color: #aaa;">Platform:</label>
+                                        <select onchange="calculateEstimate()" style="border: 1px solid #eee;">
+                                            <option value="">Choose platform...</option>
+                                            <option value="ios">iOS Only</option>
+                                            <option value="android">Android Only</option>
+                                            <option value="both">Both Platforms</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label style="color: #aaa;">Timeline:</label>
+                                        <select onchange="calculateEstimate()" style="border: 1px solid #eee;">
+                                            <option value="">Select timeline...</option>
+                                            <option value="standard">3-4 months</option>
+                                            <option value="rush">6-8 weeks</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 1rem;">
+                                    <span style="color: #27ae60;">Estimated Cost: $15,000 - $35,000</span>
+                                </div>
+                            </form>
+                        </div>
+                        <div>
+                            <div style="background-color: #e74c3c; width: 300px; height: 200px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <span style="color: white; font-size: 18px;">Mobile App Development</span>
+                            </div>
+                            <div style="margin-top: 1rem;">
+                                <span class="status-indicator status-warning"></span>
+                                <span style="color: #f39c12;">High Demand</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-category">
+                    <h3>Digital Strategy & Consulting</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                        <div class="strategy-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <h4>Technology Assessment</h4>
+                            <p>Comprehensive review of your current technology stack and recommendations for improvement.</p>
+                            <div class="tiny-click-target" onclick="showDetails('tech-assessment')" style="background: #3498db; color: white; text-align: center; border-radius: 3px; cursor: pointer; margin-top: 1rem;">
+                                Learn More
+                            </div>
+                        </div>
+                        
+                        <div class="strategy-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <h4>Digital Transformation</h4>
+                            <p>End-to-end digital transformation planning and implementation support.</p>
+                            <div class="tiny-click-target" onclick="showDetails('digital-transformation')" style="background: #3498db; color: white; text-align: center; border-radius: 3px; cursor: pointer; margin-top: 1rem;">
+                                Learn More
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 4rem 0; background: #f8f9fa;">
+            <div class="container">
+                <h2>Process Overview</h2>
+                
+                <!-- Issue: Steps not properly structured, poor focus order -->
+                <div style="display: flex; justify-content: space-between; margin: 3rem 0; position: relative;">
+                    <div class="process-step" style="text-align: center; flex: 1;" tabindex="3">
+                        <div style="width: 60px; height: 60px; background: #3498db; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">1</div>
+                        <h4>Discovery</h4>
+                        <p>We learn about your business goals and requirements</p>
+                    </div>
+                    
+                    <div class="process-step" style="text-align: center; flex: 1;" tabindex="1">
+                        <div style="width: 60px; height: 60px; background: #27ae60; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">2</div>
+                        <h4>Planning</h4>
+                        <p>Detailed project planning and timeline development</p>
+                    </div>
+                    
+                    <div class="process-step" style="text-align: center; flex: 1;" tabindex="2">
+                        <div style="width: 60px; height: 60px; background: #e74c3c; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">3</div>
+                        <h4>Development</h4>
+                        <p>Agile development with regular progress updates</p>
+                    </div>
+                    
+                    <div class="process-step" style="text-align: center; flex: 1;">
+                        <div style="width: 60px; height: 60px; background: #f39c12; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">4</div>
+                        <h4>Launch</h4>
+                        <p>Deployment and ongoing support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="padding: 4rem 0;">
+            <div class="container">
+                <h2>Technology Stack</h2>
+                <p>We work with modern, reliable technologies</p>
+                
+                <!-- Issue: Important information as background image -->
+                <div class="tech-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 3rem 0;">
+                    <div style="background: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"150\"><rect width=\"200\" height=\"150\" fill=\"%233498db\"/><text x=\"100\" y=\"75\" text-anchor=\"middle\" fill=\"white\" font-size=\"16\">Frontend</text></svg>'); padding: 2rem; color: white; border-radius: 8px;">
+                        <h4>Frontend Technologies</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li>React & Vue.js</li>
+                            <li>TypeScript</li>
+                            <li>Modern CSS</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #27ae60; padding: 2rem; color: white; border-radius: 8px;">
+                        <h4>Backend Technologies</h4>
+                        <ul>
+                            <li>Node.js & Python</li>
+                            <li>PostgreSQL & MongoDB</li>
+                            <li>AWS & Docker</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Issue: Modal without proper ARIA or focus management -->
+        <div id="quoteModal" class="modal">
+            <div class="modal-content">
+                <h3>Request a Quote</h3>
+                <form onsubmit="return TechFlow.submitContactForm(this)">
+                    <div>
+                        <label>Service:</label>
+                        <select name="service" required>
+                            <option value="">Select a service...</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="mobile-apps">Mobile Apps</option>
+                            <option value="consulting">Consulting</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    
+                    <div>
+                        <textarea placeholder="Project Description" rows="4" required></textarea>
+                    </div>
+                    
+                    <div>
+                        <input type="text" class="auto-advance" maxlength="3" placeholder="Budget (1/3)">
+                        <input type="text" class="auto-advance" maxlength="3" placeholder="K - (2/3)">  
+                        <input type="text" class="auto-advance" maxlength="3" placeholder="Range (3/3)">
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <button type="submit">Send Quote Request</button>
+                        <button type="button" onclick="closeModal('quoteModal')" style="margin-left: 1rem; background: #6c757d;">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TechFlow Digital</h4>
+                    <p>Innovative web solutions for modern businesses.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechFlow Digital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function calculateEstimate() {
+            // Issue: Calculation results not announced to screen readers
+            console.log('Estimate updated');
+        }
+        
+        function showDetails(service) {
+            // Issue: Details shown without proper focus management
+            alert('More details about ' + service);
+        }
+    </script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

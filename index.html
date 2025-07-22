@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow Digital - Innovative Web Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="images/logo.svg" width="60" height="40">
+                <span class="brand-text">TechFlow Digital</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" style="color: #888;">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 style="color: #b8b8b8;">Transform Your Digital Presence</h1>
+            <p>We create cutting-edge web solutions that drive results. From custom applications to mobile experiences, we bring your vision to life.</p>
+            <div onclick="scrollToServices()" class="cta-button primary">
+                Get Started
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/hero-bg.svg" alt="" width="600" height="400">
+        </div>
+    </section>
+
+    <section class="services-preview" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card" tabindex="0">
+                    <img src="images/service-web.svg">
+                    <h3>Web Development</h3>
+                    <p>Custom websites and applications built with modern technologies.</p>
+                    <a href="services.html" class="learn-more">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="background-color: #e74c3c; width: 300px; height: 200px;"></div>
+                    <h3>Mobile Apps</h3>
+                    <p>Native and cross-platform mobile applications.</p>
+                    <a href="services.html" class="learn-more">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="background-color: #f39c12; width: 300px; height: 200px;"></div>
+                    <h3>Digital Strategy</h3>
+                    <p>Comprehensive digital transformation consulting.</p>
+                    <a href="services.html" class="learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-work">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>See how we've helped businesses succeed</p>
+            </div>
+            
+            <div class="project-showcase">
+                <div class="project-item">
+                    <img src="images/project1.svg" alt="">
+                    <div class="project-info">
+                        <h3>RetailMax E-commerce</h3>
+                        <p>Increased online sales by 300% with our custom platform</p>
+                        <div class="project-stats">
+                            <span style="color: #27ae60;">300% Sales Increase</span>
+                            <span>6 Month Timeline</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <img src="images/project2.svg">
+                    <div class="project-info">
+                        <h3>HealthTrack Mobile App</h3>
+                        <p>Wellness tracking app with 50k+ active users</p>
+                        <div class="project-stats">
+                            <span style="color: #27ae60;">50k+ Users</span>
+                            <span>4.8 Star Rating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-slider" id="testimonialSlider">
+                <div class="testimonial active">
+                    <blockquote>
+                        "TechFlow delivered exactly what we needed. Professional, on-time, and excellent results."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <strong>Sarah Johnson</strong>
+                        <span>CEO, RetailMax</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        "The mobile app exceeded our expectations. Great user experience and rock-solid performance."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <strong>Mike Chen</strong>
+                        <span>Founder, HealthTrack</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        "Outstanding digital strategy work. They really understand our business goals."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <strong>Lisa Rodriguez</strong>
+                        <span>CMO, StartupX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's discuss how we can help transform your digital presence</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
+                    <a href="portfolio.html" class="btn btn-secondary">View Our Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TechFlow Digital</h4>
+                    <p>Innovative web solutions for modern businesses.</p>
+                    <div class="social-links">
+                        <div onclick="openSocial('twitter')" style="cursor: pointer; display: inline-block; margin-right: 10px;">Twitter</div>
+                        <div onclick="openSocial('linkedin')" style="cursor: pointer; display: inline-block; margin-right: 10px;">LinkedIn</div>
+                        <div onclick="openSocial('github')" style="cursor: pointer; display: inline-block;">GitHub</div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Web Development</a></li>
+                        <li><a href="services.html">Mobile Apps</a></li>
+                        <li><a href="services.html">Digital Strategy</a></li>
+                        <li><a href="services.html">Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Get Updates</h4>
+                    <form onsubmit="subscribeNewsletter(event)">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechFlow Digital. All rights reserved.</p>
+                <nav>
+                    <a href="#">Privacy Policy</a> |
+                    <a href="#">Terms of Service</a> |
+                    <a href="#">Cookies</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

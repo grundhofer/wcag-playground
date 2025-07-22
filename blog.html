@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - TechFlow Digital</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="images/logo.svg" alt="TechFlow Digital" width="60" height="40">
+                <span class="brand-text">TechFlow Digital</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html" aria-current="page" style="color: #888;">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main style="margin-top: 80px;">
+        <section style="padding: 4rem 0;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h1 style="color: #aaa;">TechFlow Blog</h1>
+                    <p>Insights, tutorials, and industry trends</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 4rem;">
+                    <!-- Main Content -->
+                    <div>
+                        <!-- Search Section -->
+                        <div style="margin-bottom: 3rem;">
+                            <h2>Search Articles</h2>
+                            <div style="position: relative;">
+                                <input type="text" id="searchInput" placeholder="Search blog posts..." 
+                                       oninput="searchContent(this.value)"
+                                       style="width: 100%; padding: 1rem; border: 1px solid #ddd; border-radius: 25px; padding-left: 3rem;">
+                                <span style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: #666;">🔍</span>
+                                <div id="searchResults" style="position: absolute; top: 100%; left: 0; right: 0; background: white; border: 1px solid #ddd; border-top: none; border-radius: 0 0 8px 8px; z-index: 100;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Blog Posts -->
+                        <article style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <div>
+                                    <span style="background: #3498db; color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.875rem;">Web Development</span>
+                                </div>
+                                <div style="font-size: 0.875rem; color: #666;">March 15, 2024</div>
+                            </div>
+                            
+                            <h2 style="margin-bottom: 1rem;">
+                                <a href="#" style="color: #333; text-decoration: none;">The Future of Progressive Web Apps</a>
+                            </h2>
+                            
+                            <div style="width: 100%; height: 250px; background: #667eea; border-radius: 8px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">
+                                <span style="color: white; font-size: 18px;">PWA Technology Trends</span>
+                            </div>
+                            
+                            <p style="color: #666; margin-bottom: 1.5rem;">Progressive Web Apps are revolutionizing how we think about web and mobile development. Learn about the latest features and implementation strategies...</p>
+                            
+                            <!-- Issue: Read more that changes context -->
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="#" onclick="window.location.hash='pwa-article'; return false;" style="color: #3498db; text-decoration: none; font-weight: 500;">
+                                    Read More →
+                                </a>
+                                <div>
+                                    <span style="color: #27ae60;">★ 4.8</span>
+                                    <span style="color: #666; margin-left: 1rem;">12 comments</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <div>
+                                    <span style="background: #27ae60; color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.875rem;">Mobile Development</span>
+                                </div>
+                                <div style="font-size: 0.875rem; color: #666;">March 10, 2024</div>
+                            </div>
+                            
+                            <h2 style="margin-bottom: 1rem;">
+                                <a href="#" style="color: #333; text-decoration: none;">React Native vs Flutter: 2024 Comparison</a>
+                            </h2>
+                            
+                            <div style="width: 100%; height: 250px; background: #27ae60; border-radius: 8px; margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center;">
+                                <span style="color: white; font-size: 18px;">Mobile Framework Comparison</span>
+                            </div>
+                            
+                            <p style="color: #666; margin-bottom: 1.5rem;">An in-depth analysis of React Native and Flutter, comparing performance, development experience, and ecosystem support...</p>
+                            
+                            <!-- Issue: Interactive rating without keyboard support -->
+                            <div style="margin-bottom: 1rem;">
+                                <span style="font-size: 0.875rem; margin-right: 1rem;">Rate this article:</span>
+                                <div style="display: inline-flex; gap: 0.25rem;">
+                                    <span onclick="rateArticle(1)" style="cursor: pointer; color: #f39c12;">★</span>
+                                    <span onclick="rateArticle(2)" style="cursor: pointer; color: #f39c12;">★</span>
+                                    <span onclick="rateArticle(3)" style="cursor: pointer; color: #f39c12;">★</span>
+                                    <span onclick="rateArticle(4)" style="cursor: pointer; color: #ddd;">★</span>
+                                    <span onclick="rateArticle(5)" style="cursor: pointer; color: #ddd;">★</span>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="#" style="color: #3498db; text-decoration: none; font-weight: 500;">Read More →</a>
+                                <div>
+                                    <span style="color: #27ae60;">★ 4.6</span>
+                                    <span style="color: #666; margin-left: 1rem;">8 comments</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                                <div>
+                                    <span style="background: #e74c3c; color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.875rem;">Best Practices</span>
+                                </div>
+                                <div style="font-size: 0.875rem; color: #666;">March 5, 2024</div>
+                            </div>
+                            
+                            <h2 style="margin-bottom: 1rem;">
+                                <a href="#" style="color: #333; text-decoration: none;">API Security: Essential Guidelines for 2024</a>
+                            </h2>
+                            
+                            <!-- Issue: Important content as background image -->
+                            <div style="width: 100%; height: 250px; background: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100%\" height=\"250\"><rect width=\"100%\" height=\"250\" fill=\"%23e74c3c\"/><text x=\"50%\" y=\"50%\" text-anchor=\"middle\" dy=\".3em\" fill=\"white\" font-size=\"18\">API Security Best Practices</text><text x=\"50%\" y=\"60%\" text-anchor=\"middle\" dy=\".3em\" fill=\"white\" font-size=\"14\">Authentication • Authorization • Rate Limiting</text></svg>'); border-radius: 8px; margin-bottom: 1.5rem;">
+                            </div>
+                            
+                            <p style="color: #666; margin-bottom: 1.5rem;">Comprehensive guide to securing your APIs with authentication, rate limiting, and monitoring strategies...</p>
+                            
+                            <!-- Issue: Newsletter signup that auto-subscribes -->
+                            <div style="margin-bottom: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 5px;">
+                                <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <input type="checkbox" onchange="handleAutoSubscribe(this)" style="margin-top: 0;">
+                                    <span style="font-size: 0.875rem;">Get notified of similar articles (auto-subscribes when checked)</span>
+                                </label>
+                            </div>
+                            
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <a href="#" style="color: #3498db; text-decoration: none; font-weight: 500;">Read More →</a>
+                                <div>
+                                    <span style="color: #27ae60;">★ 4.9</span>
+                                    <span style="color: #666; margin-left: 1rem;">15 comments</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Pagination with accessibility issues -->
+                        <div style="display: flex; justify-content: center; margin-top: 3rem;">
+                            <div style="display: flex; gap: 0.5rem;">
+                                <div onclick="changePage(1)" style="cursor: pointer; padding: 0.5rem 1rem; background: #3498db; color: white; border-radius: 4px;">1</div>
+                                <div onclick="changePage(2)" style="cursor: pointer; padding: 0.5rem 1rem; background: #f0f0f0; border-radius: 4px;">2</div>
+                                <div onclick="changePage(3)" style="cursor: pointer; padding: 0.5rem 1rem; background: #f0f0f0; border-radius: 4px;">3</div>
+                                <div onclick="changePage('next')" style="cursor: pointer; padding: 0.5rem 1rem; background: #f0f0f0; border-radius: 4px;">Next</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside>
+                        <!-- Categories -->
+                        <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                            <h3 style="margin-bottom: 1.5rem;">Categories</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;">
+                                    <a href="#" style="color: #333; text-decoration: none;">Web Development (12)</a>
+                                </li>
+                                <li style="margin-bottom: 0.5rem;">
+                                    <a href="#" style="color: #333; text-decoration: none;">Mobile Apps (8)</a>
+                                </li>
+                                <li style="margin-bottom: 0.5rem;">
+                                    <a href="#" style="color: #333; text-decoration: none;">Best Practices (15)</a>
+                                </li>
+                                <li style="margin-bottom: 0.5rem;">
+                                    <a href="#" style="color: #333; text-decoration: none;">Industry News (6)</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Recent Comments -->
+                        <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                            <h3 style="margin-bottom: 1.5rem;">Recent Comments</h3>
+                            <div style="border-bottom: 1px solid #eee; padding-bottom: 1rem; margin-bottom: 1rem;">
+                                <div style="font-weight: 500; margin-bottom: 0.25rem;">John Smith</div>
+                                <div style="font-size: 0.875rem; color: #666;">Great insights on PWA implementation...</div>
+                                <div style="font-size: 0.75rem; color: #999; margin-top: 0.25rem;">2 hours ago</div>
+                            </div>
+                            <div style="border-bottom: 1px solid #eee; padding-bottom: 1rem; margin-bottom: 1rem;">
+                                <div style="font-weight: 500; margin-bottom: 0.25rem;">Sarah Davis</div>
+                                <div style="font-size: 0.875rem; color: #666;">Flutter vs React Native comparison was helpful</div>
+                                <div style="font-size: 0.75rem; color: #999; margin-top: 0.25rem;">4 hours ago</div>
+                            </div>
+                        </div>
+
+                        <!-- Newsletter Signup -->
+                        <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+                            <h3 style="margin-bottom: 1rem;">Subscribe to Newsletter</h3>
+                            <form onsubmit="return subscribeNewsletter(event)">
+                                <input type="email" placeholder="Enter your email" required style="width: 100%; margin-bottom: 1rem;">
+                                
+                                <!-- Issue: Checkboxes without proper grouping -->
+                                <div style="margin-bottom: 1rem;">
+                                    <div style="margin-bottom: 0.5rem;">
+                                        <input type="checkbox" id="weekly"> 
+                                        <label for="weekly" style="font-size: 0.875rem;">Weekly updates</label>
+                                    </div>
+                                    <div style="margin-bottom: 0.5rem;">
+                                        <input type="checkbox" id="monthly"> 
+                                        <label for="monthly" style="font-size: 0.875rem;">Monthly digest</label>
+                                    </div>
+                                    <div style="margin-bottom: 0.5rem;">
+                                        <input type="checkbox" id="breaking"> 
+                                        <label for="breaking" style="font-size: 0.875rem;">Breaking news</label>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" style="width: 100%;">Subscribe</button>
+                            </form>
+                        </div>
+
+                        <!-- Popular Posts -->
+                        <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <h3 style="margin-bottom: 1.5rem;">Popular This Month</h3>
+                            
+                            <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                                <h4 style="margin-bottom: 0.5rem;">
+                                    <a href="#" style="color: #333; text-decoration: none; font-size: 0.95rem;">JavaScript Performance Tips</a>
+                                </h4>
+                                <div style="font-size: 0.75rem; color: #999;">March 1, 2024</div>
+                            </div>
+                            
+                            <div style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee;">
+                                <h4 style="margin-bottom: 0.5rem;">
+                                    <a href="#" style="color: #333; text-decoration: none; font-size: 0.95rem;">CSS Grid vs Flexbox</a>
+                                </h4>
+                                <div style="font-size: 0.75rem; color: #999;">February 28, 2024</div>
+                            </div>
+                            
+                            <div>
+                                <h4 style="margin-bottom: 0.5rem;">
+                                    <a href="#" style="color: #333; text-decoration: none; font-size: 0.95rem;">Database Design Patterns</a>
+                                </h4>
+                                <div style="font-size: 0.75rem; color: #999;">February 25, 2024</div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>TechFlow Digital</h4>
+                    <p>Innovative web solutions for modern businesses.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechFlow Digital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function rateArticle(stars) {
+            // Issue: Rating system not accessible
+            showNotification(`Rated ${stars} stars`, 'success');
+        }
+        
+        function handleAutoSubscribe(checkbox) {
+            if (checkbox.checked) {
+                // Issue: Auto-subscription without explicit user action
+                showNotification('Auto-subscribed to article notifications', 'info');
+            }
+        }
+        
+        function changePage(page) {
+            // Issue: Page changes without proper announcements
+            console.log('Changed to page:', page);
+            showNotification(`Navigated to page ${page}`, 'info');
+        }
+    </script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
