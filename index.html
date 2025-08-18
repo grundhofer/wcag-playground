@@ -1,206 +1,401 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechFlow Digital - Innovative Web Solutions</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="GreenLeaf Bürolösungen - Nachhaltige Büromaterialien und Arbeitsplatz-Beratungsdienstleistungen für moderne Unternehmen">
+    <title>GreenLeaf Bürolösungen - Nachhaltige Büromaterialien & Arbeitsplatz-Design</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="nav-brand">
-                <img src="images/logo.svg" width="60" height="40">
-                <span class="brand-text">TechFlow Digital</span>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html" style="color: #888;">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1 style="color: #b8b8b8;">Transform Your Digital Presence</h1>
-            <p>We create cutting-edge web solutions that drive results. From custom applications to mobile experiences, we bring your vision to life.</p>
-            <div onclick="scrollToServices()" class="cta-button primary">
-                Get Started
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="images/hero-bg.svg" alt="" width="600" height="400">
-        </div>
-    </section>
-
-    <section class="services-preview" id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-cards">
-                <div class="service-card" tabindex="0">
-                    <img src="images/service-web.svg">
-                    <h3>Web Development</h3>
-                    <p>Custom websites and applications built with modern technologies.</p>
-                    <a href="services.html" class="learn-more">Learn More</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" style="background-color: #e74c3c; width: 300px; height: 200px;"></div>
-                    <h3>Mobile Apps</h3>
-                    <p>Native and cross-platform mobile applications.</p>
-                    <a href="services.html" class="learn-more">Learn More</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" style="background-color: #f39c12; width: 300px; height: 200px;"></div>
-                    <h3>Digital Strategy</h3>
-                    <p>Comprehensive digital transformation consulting.</p>
-                    <a href="services.html" class="learn-more">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="featured-work">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Projects</h2>
-                <p>See how we've helped businesses succeed</p>
-            </div>
-            
-            <div class="project-showcase">
-                <div class="project-item">
-                    <img src="images/project1.svg" alt="">
-                    <div class="project-info">
-                        <h3>RetailMax E-commerce</h3>
-                        <p>Increased online sales by 300% with our custom platform</p>
-                        <div class="project-stats">
-                            <span style="color: #27ae60;">300% Sales Increase</span>
-                            <span>6 Month Timeline</span>
-                        </div>
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-nav">Zum Hauptinhalt springen</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <!-- Top Bar -->
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <span>📞 Kostenlose Beratung: +49 (0) 30 123 456 789</span>
                     </div>
-                </div>
-                
-                <div class="project-item">
-                    <img src="images/project2.svg">
-                    <div class="project-info">
-                        <h3>HealthTrack Mobile App</h3>
-                        <p>Wellness tracking app with 50k+ active users</p>
-                        <div class="project-stats">
-                            <span style="color: #27ae60;">50k+ Users</span>
-                            <span>4.8 Star Rating</span>
-                        </div>
+                    <div class="col text-right">
+                        <span>🚚 Kostenloser Versand ab €75</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="testimonials">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-slider" id="testimonialSlider">
-                <div class="testimonial active">
-                    <blockquote>
-                        "TechFlow delivered exactly what we needed. Professional, on-time, and excellent results."
-                    </blockquote>
-                    <div class="testimonial-author">
-                        <strong>Sarah Johnson</strong>
-                        <span>CEO, RetailMax</span>
+        
+        <!-- Main Header -->
+        <div class="header-main">
+            <div class="container">
+                <nav class="navbar" role="navigation" aria-label="Main navigation">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <img src="images/logo.svg" alt="GreenLeaf Office Solutions" width="40" height="40">
+                        <span>GreenLeaf</span>
                     </div>
-                </div>
-                <div class="testimonial">
-                    <blockquote>
-                        "The mobile app exceeded our expectations. Great user experience and rock-solid performance."
-                    </blockquote>
-                    <div class="testimonial-author">
-                        <strong>Mike Chen</strong>
-                        <span>Founder, HealthTrack</span>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <blockquote>
-                        "Outstanding digital strategy work. They really understand our business goals."
-                    </blockquote>
-                    <div class="testimonial-author">
-                        <strong>Lisa Rodriguez</strong>
-                        <span>CMO, StartupX</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Start Your Project?</h2>
-                <p>Let's discuss how we can help transform your digital presence</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-primary">Get Free Consultation</a>
-                    <a href="portfolio.html" class="btn btn-secondary">View Our Work</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>TechFlow Digital</h4>
-                    <p>Innovative web solutions for modern businesses.</p>
-                    <div class="social-links">
-                        <div onclick="openSocial('twitter')" style="cursor: pointer; display: inline-block; margin-right: 10px;">Twitter</div>
-                        <div onclick="openSocial('linkedin')" style="cursor: pointer; display: inline-block; margin-right: 10px;">LinkedIn</div>
-                        <div onclick="openSocial('github')" style="cursor: pointer; display: inline-block;">GitHub</div>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html">Web Development</a></li>
-                        <li><a href="services.html">Mobile Apps</a></li>
-                        <li><a href="services.html">Digital Strategy</a></li>
-                        <li><a href="services.html">Consulting</a></li>
+                    
+                    <!-- Navigation Menu -->
+                    <ul class="nav-menu" role="menubar">
+                        <li class="nav-item" role="none">
+                            <a href="index.html" class="nav-link" role="menuitem" aria-current="page" data-en="Home" data-de="Startseite">Startseite</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="products.html" class="nav-link" role="menuitem" data-en="Products" data-de="Produkte">Produkte</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="services.html" class="nav-link" role="menuitem" data-en="Services" data-de="Dienstleistungen">Dienstleistungen</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="resources.html" class="nav-link" role="menuitem" data-en="Resources" data-de="Ressourcen">Ressourcen</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="about.html" class="nav-link" role="menuitem" data-en="About" data-de="Über uns">Über uns</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="contact.html" class="nav-link" role="menuitem" data-en="Contact" data-de="Kontakt">Kontakt</a>
+                        </li>
                     </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Get Updates</h4>
-                    <form onsubmit="subscribeNewsletter(event)">
-                        <input type="email" placeholder="Enter your email" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 TechFlow Digital. All rights reserved.</p>
-                <nav>
-                    <a href="#">Privacy Policy</a> |
-                    <a href="#">Terms of Service</a> |
-                    <a href="#">Cookies</a>
+                    
+                    <!-- Header Actions -->
+                    <div class="header-actions">
+                        <!-- Language Switcher -->
+                        <div class="language-switcher">
+                            <button class="language-btn" data-lang="en" aria-label="Switch to English">EN</button>
+                            <button class="language-btn active" data-lang="de" aria-label="Auf Deutsch wechseln">DE</button>
+                        </div>
+                        
+                        <!-- Search -->
+                        <form class="search-form" role="search" aria-label="Site search">
+                            <input type="search" name="q" placeholder="Produkte suchen..." class="form-control" aria-label="Produkte suchen" data-en-placeholder="Search products..." data-de-placeholder="Produkte suchen...">
+                            <button type="submit" class="btn btn-primary" aria-label="Submit search">
+                                🔍
+                            </button>
+                        </form>
+                        
+                        <!-- Cart -->
+                        <a href="cart.html" class="btn btn-secondary" aria-label="Shopping cart" data-en="🛒 Cart" data-de="🛒 Warenkorb">
+                            🛒 <span data-en="Cart" data-de="Warenkorb">Warenkorb</span>
+                            <span class="cart-badge" aria-label="Items in cart">0</span>
+                        </a>
+                        
+                        <!-- Account -->
+                        <a href="account/login.html" class="btn btn-secondary" data-en="Login" data-de="Anmelden">Anmelden</a>
+                    </div>
                 </nav>
             </div>
         </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero py-5" style="background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%); color: white;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <h1 class="mb-4" style="color: white;" data-en="Sustainable Office Solutions for Modern Workspaces" data-de="Nachhaltige Bürolösungen für moderne Arbeitsplätze">Nachhaltige Bürolösungen für moderne Arbeitsplätze</h1>
+                        <p class="mb-4" style="font-size: 1.2rem;" data-en="Transform your office with eco-friendly supplies and expert workspace design. Join over 5,000 companies creating healthier, more productive work environments." data-de="Verwandeln Sie Ihr Büro mit umweltfreundlichen Produkten und professioneller Arbeitsplatzgestaltung. Schließen Sie sich über 5.000 Unternehmen an, die gesündere und produktivere Arbeitsumgebungen schaffen.">Verwandeln Sie Ihr Büro mit umweltfreundlichen Produkten und professioneller Arbeitsplatzgestaltung. Schließen Sie sich über 5.000 Unternehmen an, die gesündere und produktivere Arbeitsumgebungen schaffen.</p>
+                        
+                        <!-- CTA Buttons -->
+                        <div class="hero-actions mb-4">
+                            <a href="products.html" class="btn btn-accent btn-lg" data-en="Shop Products" data-de="Produkte kaufen">Produkte kaufen</a>
+                            <a href="services.html" class="btn btn-secondary btn-lg" data-en="Get Consultation" data-de="Beratung erhalten">Beratung erhalten</a>
+                        </div>
+                        
+                        <!-- Features List -->
+                        <ul class="hero-features" style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.5rem;">✅ 100% Nachhaltige Materialien</li>
+                            <li style="margin-bottom: 0.5rem;">✅ Professionelles Arbeitsplatz-Design</li>
+                            <li style="margin-bottom: 0.5rem;">✅ Schnelle & kostenlose Lieferung</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <!-- Hero Image/Video -->
+                        <div class="hero-media">
+                            <img src="images/hero-bg.svg" alt="Modern sustainable office workspace with green plants and eco-friendly furniture" width="600" height="400" style="width: 100%; border-radius: 8px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Products Carousel -->
+        <section class="featured-products py-5">
+            <div class="container">
+                <h2 class="text-center mb-4" data-en="Featured Products" data-de="Empfohlene Produkte">Empfohlene Produkte</h2>
+                
+                <div class="carousel" data-autoplay="true" role="region" aria-label="Featured products carousel">
+                    <!-- Carousel Controls -->
+                    <button class="carousel-prev btn btn-secondary" aria-label="Vorheriges Produkt">‹</button>
+                    <button class="carousel-next btn btn-secondary" aria-label="Nächstes Produkt">›</button>
+                    <button class="carousel-pause btn btn-secondary" aria-label="Karussell pausieren">⏸</button>
+                    
+                    <!-- Slides -->
+                    <div class="carousel-slides">
+                        <div class="carousel-slide" aria-hidden="false">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img src="images/project1.svg" alt="Sustainable bamboo standing desk" class="card-img">
+                                        <div class="card-body">
+                                            <h3 data-en="EcoDesk Pro" data-de="ÖkoSchreibtisch Pro">ÖkoSchreibtisch Pro</h3>
+                                            <p data-en="Adjustable bamboo standing desk" data-de="Höhenverstellbarer Bambus-Stehschreibtisch">Höhenverstellbarer Bambus-Stehschreibtisch</p>
+                                            <div class="price">€299.99</div>
+                                            <button class="btn btn-primary add-to-cart" data-product-id="desk-001" data-en="Add to Cart" data-de="In den Warenkorb">In den Warenkorb</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img src="images/project2.svg" alt="Ergonomic office chair made from recycled materials" class="card-img">
+                                        <div class="card-body">
+                                            <h3 data-en="ErgoChair Green" data-de="ErgoStuhl Grün">ErgoStuhl Grün</h3>
+                                            <p data-en="Ergonomic chair from recycled materials" data-de="Ergonomischer Stuhl aus recycelten Materialien">Ergonomischer Stuhl aus recycelten Materialien</p>
+                                            <div class="price">€189.99</div>
+                                            <button class="btn btn-primary add-to-cart" data-product-id="chair-001" data-en="Add to Cart" data-de="In den Warenkorb">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img src="images/hero-bg.svg" alt="Set of eco-friendly office supplies including recycled paper and biodegradable pens" class="card-img">
+                                        <div class="card-body">
+                                            <h3 data-en="Green Starter Kit" data-de="Grünes Starter-Kit">Grünes Starter-Kit</h3>
+                                            <p data-en="Complete eco office supply set" data-de="Komplettes umweltfreundliches Büromaterial-Set">Komplettes umweltfreundliches Büromaterial-Set</p>
+                                            <div class="price">€49.99</div>
+                                            <button class="btn btn-primary add-to-cart" data-product-id="kit-001" data-en="Add to Cart" data-de="In den Warenkorb">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-slide" aria-hidden="true" style="display: none;">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img src="images/project2.svg" alt="Energy-efficient LED monitor" class="card-img">
+                                        <div class="card-body">
+                                            <h3>ÖkoMonitor 24"</h3>
+                                            <p>Energieeffizientes LED-Display</p>
+                                            <div class="price">€149.99</div>
+                                            <button class="btn btn-primary add-to-cart" data-product-id="monitor-001">In den Warenkorb</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img src="images/project1.svg" alt="Modular storage system made from sustainable bamboo" class="card-img">
+                                        <div class="card-body">
+                                            <h3>FlexLager System</h3>
+                                            <p>Modulare Bambus-Aufbewahrungslösung</p>
+                                            <div class="price">€79.99</div>
+                                            <button class="btn btn-primary add-to-cart" data-product-id="storage-001">In den Warenkorb</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <img src="images/project2.svg" alt="LED desk lamp with wireless charging pad" class="card-img">
+                                        <div class="card-body">
+                                            <h3>SmartLicht Pro</h3>
+                                            <p>LED-Lampe mit kabelloser Aufladung</p>
+                                            <div class="price">€89.99</div>
+                                            <button class="btn btn-primary add-to-cart" data-product-id="light-001">In den Warenkorb</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators">
+                        <button class="carousel-indicator active" aria-label="Zu Folie 1 gehen"></button>
+                        <button class="carousel-indicator" aria-label="Zu Folie 2 gehen"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Overview -->
+        <section class="services-overview py-5" style="background: var(--light-gray);">
+            <div class="container">
+                <h2 class="text-center mb-4" data-en="Our Services" data-de="Unsere Dienstleistungen">Unsere Dienstleistungen</h2>
+                <p class="text-center mb-5" data-en="Expert solutions for creating sustainable, productive workspaces" data-de="Expertenlösungen für nachhaltige und produktive Arbeitsplätze">Expertenlösungen für nachhaltige und produktive Arbeitsplätze</p>
+                
+                <div class="row">
+                    <div class="col-4">
+                        <div class="service-card text-center card">
+                            <div class="card-body">
+                                <div class="service-icon mb-3" style="font-size: 3rem;">🌱</div>
+                                <h3 data-en="Workspace Consulting" data-de="Arbeitsplatz-Beratung">Arbeitsplatz-Beratung</h3>
+                                <p data-en="Transform your office with expert design advice and sustainable solutions tailored to your needs." data-de="Verwandeln Sie Ihr Büro mit Expertenberatung und nachhaltigen Lösungen, die auf Ihre Bedürfnisse zugeschnitten sind.">Verwandeln Sie Ihr Büro mit Expertenberatung und nachhaltigen Lösungen, die auf Ihre Bedürfnisse zugeschnitten sind.</p>
+                                <a href="services/workspace-consulting.html" class="btn btn-primary" data-en="Learn More" data-de="Mehr erfahren">Mehr erfahren</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="service-card text-center card">
+                            <div class="card-body">
+                                <div class="service-icon mb-3" style="font-size: 3rem;">📊</div>
+                                <h3 data-en="Sustainability Audit" data-de="Nachhaltigkeits-Audit">Nachhaltigkeits-Audit</h3>
+                                <p data-en="Comprehensive assessment of your current office setup with actionable recommendations for improvement." data-de="Umfassende Bewertung Ihrer aktuellen Büroausstattung mit umsetzbaren Verbesserungsempfehlungen.">Umfassende Bewertung Ihrer aktuellen Büroausstattung mit umsetzbaren Verbesserungsempfehlungen.</p>
+                                <a href="services/sustainability-audit.html" class="btn btn-primary" data-en="Get Audit" data-de="Audit erhalten">Audit erhalten</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="service-card text-center card">
+                            <div class="card-body">
+                                <div class="service-icon mb-3" style="font-size: 3rem;">🎓</div>
+                                <h3 data-en="Team Training" data-de="Team-Schulung">Team-Schulung</h3>
+                                <p data-en="Educational workshops on sustainable office practices and wellness programs for your team." data-de="Bildungsworkshops zu nachhaltigen Büropraktiken und Wellness-Programmen für Ihr Team.">Bildungsworkshops zu nachhaltigen Büropraktiken und Wellness-Programmen für Ihr Team.</p>
+                                <a href="services/training.html" class="btn btn-primary" data-en="View Courses" data-de="Kurse ansehen">Kurse ansehen</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials -->
+        <section class="testimonials py-5">
+            <div class="container">
+                <h2 class="text-center mb-4" data-en="What Our Customers Say" data-de="Was unsere Kunden sagen">Was unsere Kunden sagen</h2>
+                
+                <div class="row">
+                    <div class="col-4">
+                        <div class="testimonial-card card">
+                            <div class="card-body">
+                                <div class="rating mb-3" aria-label="5 Sterne Bewertung">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <blockquote>
+                                    <p>"GreenLeaf hat unseren Büroraum komplett verwandelt. Die nachhaltigen Möbel sind wunderschön und unsere Teamproduktivität ist um 30% gestiegen."</p>
+                                    <footer>
+                                        <cite>— Sarah Johnson, CEO bei TechStart</cite>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="testimonial-card card">
+                            <div class="card-body">
+                                <div class="rating mb-3" aria-label="5 Sterne Bewertung">
+                                    ⭐⭐⭐⭐⭐
+                                </div>
+                                <blockquote>
+                                    <p>"Exzellenter Service und hochwertige Produkte. Die Beratung half uns dabei, einen Arbeitsplatz zu schaffen, der unsere Werte wirklich widerspiegelt."</p>
+                                    <footer>
+                                        <cite>— Michael Chen, Gründer bei EcoDesign</cite>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="testimonial-card card">
+                            <div class="card-body">
+                                <div class="rating mb-3" aria-label="4 Sterne Bewertung">
+                                    ⭐⭐⭐⭐
+                                </div>
+                                <blockquote>
+                                    <p>"Schnelle Lieferung und großartiger Kundenservice. Die ergonomischen Stühle haben einen großen Unterschied für den Komfort unseres Teams gemacht."</p>
+                                    <footer>
+                                        <cite>— Lisa Rodriguez, Betriebsleiterin</cite>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter Signup -->
+        <section class="newsletter py-5" style="background: var(--primary-green); color: white;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <h2 style="color: white;" data-en="Stay Updated" data-de="Bleiben Sie auf dem Laufenden">Bleiben Sie auf dem Laufenden</h2>
+                        <p data-en="Get the latest news on sustainable office solutions and exclusive offers." data-de="Erhalten Sie die neuesten Nachrichten zu nachhaltigen Bürolösungen und exklusive Angebote.">Erhalten Sie die neuesten Nachrichten zu nachhaltigen Bürolösungen und exklusive Angebote.</p>
+                    </div>
+                    <div class="col-6">
+                        <form class="newsletter-form">
+                            <div class="form-group">
+                                <label for="newsletter-email" class="visually-hidden">E-Mail-Adresse</label>
+                                <input type="email" id="newsletter-email" class="form-control" placeholder="Geben Sie Ihre E-Mail ein" required>
+                            </div>
+                            <button type="submit" class="btn btn-accent" data-en="Subscribe" data-de="Abonnieren">Abonnieren</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer py-5" style="background: var(--dark-gray); color: white;" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <h4 style="color: white;">GreenLeaf</h4>
+                    <p>Nachhaltige Bürolösungen für moderne Unternehmen mit Umweltverantwortung.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Folgen Sie uns auf LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="Folgen Sie uns auf Twitter">Twitter</a>
+                        <a href="#" aria-label="Folgen Sie uns auf Instagram">Instagram</a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h4 style="color: white;">Produkte</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="products/furniture.html">Büromöbel</a></li>
+                        <li><a href="products/supplies.html">Büromaterial</a></li>
+                        <li><a href="products/technology.html">Technologie</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h4 style="color: white;">Dienstleistungen</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="services/workspace-consulting.html">Arbeitsplatz-Beratung</a></li>
+                        <li><a href="services/sustainability-audit.html">Nachhaltigkeits-Audit</a></li>
+                        <li><a href="services/training.html">Team-Schulung</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h4 style="color: white;">Support</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="contact.html">Kontaktieren Sie uns</a></li>
+                        <li><a href="resources/downloads.html">Downloads</a></li>
+                        <li><a href="resources/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom mt-4 pt-4" style="border-top: 1px solid #495057;">
+                <div class="row">
+                    <div class="col-6">
+                        <p>&copy; 2024 GreenLeaf Bürolösungen. Alle Rechte vorbehalten.</p>
+                    </div>
+                    <div class="col-6 text-right">
+                        <a href="privacy.html">Datenschutzrichtlinie</a> |
+                        <a href="terms.html">Nutzungsbedingungen</a> |
+                        <a href="accessibility.html">Barrierefreiheit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
-
-    <script src="js/scripts.js"></script>
+    
+    <script src="js/main.js"></script>
 </body>
 </html>
