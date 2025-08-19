@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shopping cart - Review and checkout your sustainable office products">
+    <title>Warenkorb - GreenLeaf Bürolösungen</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-nav">Zum Hauptinhalt springen</a>
+    
+    
+    <header class="header" role="banner">
+        
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <span>📞 Kostenlose Beratung: +49 (0) 30 123 456 789</span>
+                    </div>
+                    <div class="col text-right">
+                        <span>🚚 Kostenloser Versand ab €75</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="header-main">
+            <div class="container">
+                <nav class="navbar" role="navigation" aria-label="Main navigation">
+                    
+                    <div class="logo">
+                        <img src="images/logo.svg" alt="GreenLeaf Office Solutions" width="40" height="40">
+                        <span>GreenLeaf</span>
+                    </div>
+                    
+                    
+                    <ul class="nav-menu" role="menubar">
+                        <li class="nav-item" role="none">
+                            <a href="index.html" class="nav-link" role="menuitem">Startseite</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="products.html" class="nav-link" role="menuitem">Produkte</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="services.html" class="nav-link" role="menuitem">Dienstleistungen</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="resources.html" class="nav-link" role="menuitem">Ressourcen</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="about.html" class="nav-link" role="menuitem">Über uns</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="contact.html" class="nav-link" role="menuitem">Kontakt</a>
+                        </li>
+                    </ul>
+                    
+                    
+                    <div class="header-actions">
+                        
+                        <form class="search-form" role="search" aria-label="Site search">
+                            <input type="search" name="q" placeholder="Suchen..." class="form-control" aria-label="Suchen">
+                            <button type="submit" class="btn btn-primary" aria-label="Suche absenden">
+                                🔍
+                            </button>
+                        </form>
+                        
+                        
+                        <a href="cart.html" class="btn btn-secondary" aria-label="Shopping cart" aria-current="page">
+                            🛒 Warenkorb
+                            <span class="cart-badge" aria-label="Artikel im Warenkorb">3</span>
+                        </a>
+                        
+                        
+                        <a href="account/login.html" class="btn btn-secondary">Anmelden</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    
+    <main id="main-content" role="main">
+        
+        <section class="page-header py-5" style="background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%); color: white;">
+            <div class="container">
+                <h1 style="color: white;" data-en="Shopping Cart" data-de="Warenkorb">Warenkorb</h1>
+                <p style="font-size: 1.2rem;" data-en="Review your sustainable office selections" data-de="Überprüfen Sie Ihre nachhaltigen Büro-Auswahlen">Überprüfen Sie Ihre nachhaltigen Büro-Auswahlen</p>
+            </div>
+        </section>
+        
+        
+        <section class="cart-section py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8">
+                        
+                        <table style="width: 100%; background: white; box-shadow: var(--shadow-sm);">
+                            <tr style="background: var(--light-gray); border-bottom: 2px solid #ddd;">
+                                <td style="padding: 1rem; font-weight: bold;" data-en="Product" data-de="Produkt">Produkt</td>
+                                <td style="padding: 1rem; font-weight: bold;" data-en="Price" data-de="Preis">Preis</td>
+                                <td style="padding: 1rem; font-weight: bold;" data-en="Quantity" data-de="Menge">Menge</td>
+                                <td style="padding: 1rem; font-weight: bold;" data-en="Total" data-de="Gesamt">Gesamt</td>
+                                <td style="padding: 1rem;"></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="images/product1.jpg" alt="EcoDesk Pro" style="width: 80px; height: 80px; margin-right: 1rem;">
+                                        <div>
+                                            <h3 style="margin: 0; font-size: 1.1rem;">EcoDesk Pro</h3>
+                                            <p style="margin: 0; color: #666; font-size: 0.9rem;">Bamboo standing desk</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="padding: 1rem;">€299.99</td>
+                                <td style="padding: 1rem;">
+                                    
+                                    <input type="number" value="1" min="1" max="10" style="width: 60px; padding: 0.25rem;">
+                                </td>
+                                <td style="padding: 1rem; font-weight: bold;">€299.99</td>
+                                <td style="padding: 1rem;">
+                                    
+                                    <button style="background: none; border: none; color: var(--error-red); cursor: pointer; font-size: 1.2rem;">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem;">
+                                    <div style="display: flex; align-items: center;">
+                                        
+                                        <img src="images/product2.jpg" style="width: 80px; height: 80px; margin-right: 1rem;">
+                                        <div>
+                                            <h3 style="margin: 0; font-size: 1.1rem;">ErgoChair Green</h3>
+                                            <p style="margin: 0; color: #666; font-size: 0.9rem;">Recycled materials chair</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="padding: 1rem;">€189.99</td>
+                                <td style="padding: 1rem;">
+                                    <input type="number" value="2" min="1" max="10" style="width: 60px; padding: 0.25rem;">
+                                </td>
+                                <td style="padding: 1rem; font-weight: bold;">€379.98</td>
+                                <td style="padding: 1rem;">
+                                    <button style="background: none; border: none; color: var(--error-red); cursor: pointer; font-size: 1.2rem;">🗑️</button>
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #ddd;">
+                                <td style="padding: 1rem;">
+                                    <div style="display: flex; align-items: center;">
+                                        <img src="images/product3.jpg" alt="Green Starter Kit" style="width: 80px; height: 80px; margin-right: 1rem;">
+                                        <div>
+                                            <h3 style="margin: 0; font-size: 1.1rem;">Green Starter Kit</h3>
+                                            <p style="margin: 0; color: #666; font-size: 0.9rem;">Office supply set</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td style="padding: 1rem;">€49.99</td>
+                                <td style="padding: 1rem;">
+                                    <input type="number" value="1" min="1" max="10" style="width: 60px; padding: 0.25rem;">
+                                </td>
+                                <td style="padding: 1rem; font-weight: bold;">€49.99</td>
+                                <td style="padding: 1rem;">
+                                    <button style="background: none; border: none; color: var(--error-red); cursor: pointer; font-size: 1.2rem;">🗑️</button>
+                                </td>
+                            </tr>
+                        </table>
+                        
+                        
+                        <div class="card mt-4">
+                            <div class="card-body">
+                                <h3 data-en="Have a coupon code?" data-de="Haben Sie einen Gutscheincode?">Haben Sie einen Gutscheincode?</h3>
+                                <form style="display: flex; gap: 1rem;">
+                                    
+                                    <input type="text" placeholder="Gutscheincode eingeben" class="form-control" style="flex: 1;">
+                                    <button type="submit" class="btn btn-primary" data-en="Apply" data-de="Anwenden">Anwenden</button>
+                                </form>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="mt-4">
+                            <a href="products.html" class="btn btn-secondary" data-en="← Continue Shopping" data-de="← Weiter einkaufen">← Weiter einkaufen</a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-4">
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 style="margin: 0; font-size: 1.3rem;" data-en="Order Summary" data-de="Bestellzusammenfassung">Bestellzusammenfassung</h2>
+                            </div>
+                            <div class="card-body">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                                    <span data-en="Subtotal (4 items)" data-de="Zwischensumme (4 Artikel)">Zwischensumme (4 Artikel)</span>
+                                    <span>€729.96</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                                    <span data-en="Shipping" data-de="Versand">Versand</span>
+                                    
+                                    <span style="color: green;" data-en="FREE" data-de="KOSTENLOS">KOSTENLOS</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                                    <span>Tax (19%)</span>
+                                    <span>€138.69</span>
+                                </div>
+                                <hr>
+                                <div style="display: flex; justify-content: space-between; font-size: 1.2rem; font-weight: bold;">
+                                    <span>Total</span>
+                                    <span style="color: var(--primary-green);">€868.65</span>
+                                </div>
+                                
+                                
+                                <div style="background: #fff3cd; padding: 0.75rem; margin: 1rem 0; border-radius: 4px;">
+                                    <p style="margin: 0; color: #856404; font-size: 0.9rem;">⏰ Items in cart reserved for 15 minutes</p>
+                                </div>
+                                
+                                <button class="btn btn-accent btn-lg" style="width: 100%; margin-top: 1rem;" data-en="Proceed to Checkout" data-de="Zur Kasse gehen">Zur Kasse gehen</button>
+                                
+                                
+                                <div class="mt-3 text-center">
+                                    <p style="margin-bottom: 0.5rem; color: #666;">Akzeptierte Zahlungsmethoden</p>
+                                    
+                                    <img src="images/logo.svg" style="width: 40px; height: 25px; margin: 0 5px;">
+                                    <img src="images/logo.svg" style="width: 40px; height: 25px; margin: 0 5px;">
+                                    <img src="images/logo.svg" style="width: 40px; height: 25px; margin: 0 5px;">
+                                    <img src="images/logo.svg" style="width: 40px; height: 25px; margin: 0 5px;">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="card mt-4">
+                            <div class="card-body">
+                                <h3 style="font-size: 1.1rem;">Warum bei GreenLeaf einkaufen?</h3>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="margin-bottom: 0.5rem;">✓ 100% Nachhaltige Produkte</li>
+                                    <li style="margin-bottom: 0.5rem;">✓ Kostenloser Versand ab €75</li>
+                                    <li style="margin-bottom: 0.5rem;">✓ 30-Tage Rückgaberecht</li>
+                                    <li style="margin-bottom: 0.5rem;">✓ Expertenberatung verfügbar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <section class="recently-viewed mt-5">
+                    <h2 class="mb-4" data-en="Recently Viewed" data-de="Kürzlich angesehen">Kürzlich angesehen</h2>
+                    
+                    <div style="display: flex; gap: 1rem; overflow-x: auto;">
+                        <div class="card" style="min-width: 200px;">
+                            <img src="images/project1.svg" alt="BambooShelf" class="card-img">
+                            <div class="card-body">
+                                <h4 style="font-size: 1rem;">BambooShelf</h4>
+                                <p style="font-size: 1.1rem; color: var(--primary-green); font-weight: bold;">€79.99</p>
+                            </div>
+                        </div>
+                        <div class="card" style="min-width: 200px;">
+                            <img src="images/smartlight-pro.svg" alt="SmartLight Pro" class="card-img">
+                            <div class="card-body">
+                                <h4 style="font-size: 1rem;">SmartLight Pro</h4>
+                                <p style="font-size: 1.1rem; color: var(--primary-green); font-weight: bold;">€89.99</p>
+                            </div>
+                        </div>
+                        <div class="card" style="min-width: 200px;">
+                            <img src="images/hero-bg.svg" alt="Cork Organizer" class="card-img">
+                            <div class="card-body">
+                                <h4 style="font-size: 1rem;">Cork Organizer</h4>
+                                <p style="font-size: 1.1rem; color: var(--primary-green); font-weight: bold;">€34.99</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    
+    
+    <footer class="footer py-5" style="background: var(--dark-gray); color: white;" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <h4 style="color: white;">GreenLeaf</h4>
+                    <p>Nachhaltige Bürolösungen für moderne Unternehmen mit Umweltverantwortung.</p>
+                </div>
+                <div class="col-3">
+                    <h4 style="color: white;">Produkte</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="products/furniture.html">Büromöbel</a></li>
+                        <li><a href="products/supplies.html">Büromaterial</a></li>
+                        <li><a href="products/technology.html">Technologie</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h4 style="color: white;">Dienstleistungen</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="services/workspace-consulting.html">Arbeitsplatz-Beratung</a></li>
+                        <li><a href="services/sustainability-audit.html">Nachhaltigkeits-Audit</a></li>
+                        <li><a href="services/training.html">Team-Schulung</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h4 style="color: white;">Support</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="contact.html">Kontaktieren Sie uns</a></li>
+                        <li><a href="resources/downloads.html">Downloads</a></li>
+                        <li><a href="resources/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom mt-4 pt-4" style="border-top: 1px solid #495057;">
+                <div class="row">
+                    <div class="col-6">
+                        <p>&copy; 2024 GreenLeaf Bürolösungen. Alle Rechte vorbehalten.</p>
+                    </div>
+                    <div class="col-6 text-right">
+                        <a href="privacy.html">Datenschutz</a> |
+                        <a href="terms.html">Nutzungsbedingungen</a> |
+                        <a href="accessibility.html">Barrierefreiheit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  
+  <rect width="300" height="200" fill="#f8f9fa"/>
+  
+  
+  <rect x="50" y="120" width="200" height="60" fill="#8d6e63" rx="8"/>
+  
+  
+  <rect x="40" y="100" width="220" height="25" fill="#a1887f" rx="12"/>
+  
+  
+  <line x1="40" y1="105" x2="260" y2="105" stroke="#6d4c41" stroke-width="1"/>
+  <line x1="40" y1="110" x2="260" y2="110" stroke="#6d4c41" stroke-width="1"/>
+  <line x1="40" y1="115" x2="260" y2="115" stroke="#6d4c41" stroke-width="1"/>
+  <line x1="40" y1="120" x2="260" y2="120" stroke="#6d4c41" stroke-width="1"/>
+  
+  
+  <rect x="60" y="125" width="15" height="50" fill="#5d4037" rx="3"/>
+  <rect x="225" y="125" width="15" height="50" fill="#5d4037" rx="3"/>
+  
+  
+  <circle cx="67" cy="140" r="3" fill="#4caf50"/>
+  <circle cx="232" cy="140" r="3" fill="#4caf50"/>
+  
+  
+  <rect x="130" y="75" width="40" height="25" fill="#424242" rx="3"/>
+  <rect x="125" y="60" width="50" height="20" fill="#1976d2" rx="2"/>
+  
+  
+  <rect x="200" y="85" width="30" height="15" fill="#333" rx="2"/>
+  <circle cx="210" cy="92" r="2" fill="#4caf50"/>
+  <circle cx="220" cy="92" r="2" fill="#ff9800"/>
+  
+  
+  <circle cx="230" cy="50" r="15" fill="#4caf50"/>
+  <text x="230" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">♻</text>
+  
+  
+  <text x="150" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c5530">EcoDesk Pro</text>
+  <text x="150" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Höhenverstellbarer Bambus-Stehschreibtisch</text>
+</svg>

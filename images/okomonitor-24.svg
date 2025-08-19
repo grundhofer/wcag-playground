@@ -1,0 +1,47 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  
+  <rect width="400" height="300" fill="#4caf50"/>
+  
+  
+  <rect x="170" y="200" width="60" height="40" fill="white" opacity="0.9" rx="5"/>
+  <rect x="185" y="240" width="30" height="15" fill="white" opacity="0.7" rx="3"/>
+  
+  
+  <rect x="120" y="80" width="160" height="120" fill="white" opacity="0.95" rx="8"/>
+  <rect x="130" y="90" width="140" height="100" fill="#1976d2" rx="5"/>
+  
+  
+  <rect x="140" y="110" width="120" height="60" fill="#e3f2fd" rx="3"/>
+  
+  
+  <rect x="150" y="140" width="8" height="20" fill="#4caf50"/>
+  <rect x="165" y="130" width="8" height="30" fill="#4caf50"/>
+  <rect x="180" y="120" width="8" height="40" fill="#4caf50"/>
+  <rect x="195" y="125" width="8" height="35" fill="#4caf50"/>
+  <rect x="210" y="115" width="8" height="45" fill="#4caf50"/>
+  <rect x="225" y="135" width="8" height="25" fill="#4caf50"/>
+  
+  
+  <text x="200" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#1976d2">Energy Efficiency</text>
+  
+  
+  <circle cx="260" cy="100" r="3" fill="#4caf50"/>
+  <circle cx="270" cy="100" r="3" fill="#4caf50"/>
+  
+  
+  <circle cx="320" cy="60" r="25" fill="#4caf50" opacity="0.9"/>
+  <text x="320" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">ECO</text>
+  
+  
+  <text x="50" y="150" font-family="Arial, sans-serif" font-size="16" fill="white" font-weight="bold">24"</text>
+  
+  
+  <text x="200" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">ÖkoMonitor 24"</text>
+  
+  
+  <circle cx="80" cy="250" r="15" fill="white" opacity="0.9"/>
+  <text x="80" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#4caf50">♻</text>
+  
+  <circle cx="320" cy="250" r="15" fill="white" opacity="0.9"/>
+  <text x="320" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#4caf50">⚡</text>
+</svg>

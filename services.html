@@ -1,284 +1,319 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services - TechFlow Digital</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Professionelle Arbeitsplatz-Beratung, Nachhaltigkeits-Audits und Team-Schulungen für umweltfreundliche Büros">
+    <title>Dienstleistungen - GreenLeaf Bürolösungen</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="nav-brand">
-                <img src="images/logo.svg" alt="TechFlow Digital" width="60" height="40">
-                <span class="brand-text">TechFlow Digital</span>
+    
+    <a href="#main-content" class="skip-nav">Zum Hauptinhalt springen</a>
+    
+    
+    <header class="header" role="banner">
+        
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <span>📞 Kostenlose Beratung: +49 (0) 30 123 456 789</span>
+                    </div>
+                    <div class="col text-right">
+                        <span>🚚 Kostenloser Versand ab €75</span>
+                    </div>
+                </div>
             </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html" aria-current="page" style="color: #888;">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+        </div>
+        
+        
+        <div class="header-main">
+            <div class="container">
+                <nav class="navbar" role="navigation" aria-label="Main navigation">
+                    
+                    <div class="logo">
+                        <img src="images/logo.svg" alt="GreenLeaf Office Solutions" width="40" height="40">
+                        <span>GreenLeaf</span>
+                    </div>
+                    
+                    
+                    <ul class="nav-menu" role="menubar">
+                        <li class="nav-item" role="none">
+                            <a href="index.html" class="nav-link" role="menuitem">Startseite</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="products.html" class="nav-link" role="menuitem">Produkte</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="services.html" class="nav-link" role="menuitem" aria-current="page">Dienstleistungen</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="resources.html" class="nav-link" role="menuitem">Ressourcen</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="about.html" class="nav-link" role="menuitem">Über uns</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="contact.html" class="nav-link" role="menuitem">Kontakt</a>
+                        </li>
+                    </ul>
+                    
+                    
+                    <div class="header-actions">
+                        
+                        <form class="search-form" role="search" aria-label="Site search">
+                            <input type="search" name="q" placeholder="Dienstleistungen suchen..." class="form-control" aria-label="Dienstleistungen suchen">
+                            <button type="submit" class="btn btn-primary" aria-label="Submit search">
+                                🔍
+                            </button>
+                        </form>
+                        
+                        
+                        <a href="cart.html" class="btn btn-secondary" aria-label="Shopping cart">
+                            🛒 Warenkorb
+                            <span class="cart-badge" aria-label="Items in cart">0</span>
+                        </a>
+                        
+                        
+                        <a href="account/login.html" class="btn btn-secondary">Anmelden</a>
+                    </div>
+                </nav>
+            </div>
         </div>
     </header>
-
-    <main style="margin-top: 80px;">
-        <section class="hero" style="min-height: 400px;">
-            <div class="hero-content">
-                <h1 style="color: #ccc;">Our Services</h1>
-                <p>Comprehensive digital solutions tailored to your business needs</p>
-                <div onclick="scrollToServices()" class="cta-button primary">
-                    Explore Our Work
-                </div>
+    
+    
+    <main id="main-content" role="main">
+        
+        <section class="page-header py-5" style="background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%); color: white;">
+            <div class="container">
+                <h1 style="color: white;" data-en="Professional Services" data-de="Professionelle Dienstleistungen">Professionelle Dienstleistungen</h1>
+                <p style="font-size: 1.2rem;" data-en="Expert guidance for creating sustainable, productive workspaces" data-de="Fachkundige Beratung für die Schaffung nachhaltiger, produktiver Arbeitsplätze">Fachkundige Beratung für die Schaffung nachhaltiger, produktiver Arbeitsplätze</p>
             </div>
         </section>
-
-        <section class="services-detail" style="padding: 4rem 0;">
+        
+        
+        <section class="services py-5">
             <div class="container">
-                <div class="service-category">
-                    <h2>Web Development</h2>
-                    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
-                        <div>
-                            <img src="images/service-web.svg" alt="">
-                            <div style="margin-top: 1rem;">
-                                <span class="status-indicator status-active"></span>
-                                <span style="color: #27ae60;">Available Now</span>
-                            </div>
-                        </div>
-                        <div>
-                            <h3>Custom Web Applications</h3>
-                            <p>We build modern, responsive web applications using the latest technologies. Our team specializes in React, Vue.js, and Node.js development.</p>
-                            
-                            <div style="margin: 2rem 0;">
-                                <h4>Features Include:</h4>
-                                <ul>
-                                    <li>Responsive design for all devices</li>
-                                    <li>SEO optimization</li>
-                                    <li>Performance optimization</li>
-                                    <li style="color: #e74c3c;">Fast turnaround times</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="pricing">
-                                <p><strong>Starting at $5,000</strong></p>
-                                <button onclick="TechFlow.requestQuote('web-development')" class="btn btn-primary">
-                                    Get Quote
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-category">
-                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: center; margin-bottom: 4rem;">
-                        <div>
-                            <h3>Mobile Applications</h3>
-                            <p>Native iOS and Android apps, plus cross-platform solutions using React Native and Flutter.</p>
-                            
-                            <!-- Issue: Poor contrast and form submission -->
-                            <form onsubmit="return false;" style="margin: 2rem 0; padding: 1.5rem; background: #f9f9f9; border-radius: 8px;">
-                                <h4>Quick Cost Estimate</h4>
-                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                                    <div>
-                                        <label style="color: #aaa;">Platform:</label>
-                                        <select onchange="calculateEstimate()" style="border: 1px solid #eee;">
-                                            <option value="">Choose platform...</option>
-                                            <option value="ios">iOS Only</option>
-                                            <option value="android">Android Only</option>
-                                            <option value="both">Both Platforms</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <label style="color: #aaa;">Timeline:</label>
-                                        <select onchange="calculateEstimate()" style="border: 1px solid #eee;">
-                                            <option value="">Select timeline...</option>
-                                            <option value="standard">3-4 months</option>
-                                            <option value="rush">6-8 weeks</option>
-                                        </select>
+                
+                <img src="images/decorative-border.png" alt="Green decorative border" style="width: 100%; height: 5px; margin-bottom: 2rem;">
+                
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="card-body" style="padding: 3rem;">
+                                        <h2 data-en="Workspace Consulting" data-de="Arbeitsplatz-Beratung">Arbeitsplatz-Beratung</h2>
+                                        
+                                        <p style="color: #999; font-size: 1.1rem;" data-en="Transform your office with expert design and sustainability solutions" data-de="Verwandeln Sie Ihr Büro mit fachkundigem Design und nachhaltigen Lösungen">Verwandeln Sie Ihr Büro mit fachkundigem Design und nachhaltigen Lösungen</p>
+                                        
+                                        <h3 class="mt-4" data-en="What's Included:" data-de="Was ist enthalten:">Was ist enthalten:</h3>
+                                        <ul>
+                                            <li data-en="On-site workspace assessment" data-de="Vor-Ort-Arbeitsplatz-Bewertung">Vor-Ort-Arbeitsplatz-Bewertung</li>
+                                            <li data-en="Custom design recommendations" data-de="Maßgeschneiderte Design-Empfehlungen">Maßgeschneiderte Design-Empfehlungen</li>
+                                            <li data-en="Sustainability optimization plan" data-de="Nachhaltigkeits-Optimierungsplan">Nachhaltigkeits-Optimierungsplan</li>
+                                            <li data-en="Employee wellness analysis" data-de="Mitarbeiter-Wellness-Analyse">Mitarbeiter-Wellness-Analyse</li>
+                                            <li data-en="3D workspace visualization" data-de="3D-Arbeitsplatz-Visualisierung">3D-Arbeitsplatz-Visualisierung</li>
+                                        </ul>
+                                        
+                                        <div class="mt-4">
+                                            <span style="font-size: 2rem; color: var(--primary-green); font-weight: bold;">€1,499</span>
+                                            <span style="color: #666;"> / per workspace</span>
+                                        </div>
+                                        
+                                        
+                                        <a href="services/workspace-consulting.html" class="btn btn-primary btn-lg mt-3" data-en="Learn More" data-de="Mehr erfahren">Mehr erfahren</a>
                                     </div>
                                 </div>
-                                <div style="margin-top: 1rem;">
-                                    <span style="color: #27ae60;">Estimated Cost: $15,000 - $35,000</span>
+                                <div class="col-6">
+                                    <img src="images/workspace-consulting.svg" alt="Workspace consulting service" style="width: 100%; height: 100%; object-fit: cover;">
                                 </div>
-                            </form>
-                        </div>
-                        <div>
-                            <div style="background-color: #e74c3c; width: 300px; height: 200px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
-                                <span style="color: white; font-size: 18px;">Mobile App Development</span>
-                            </div>
-                            <div style="margin-top: 1rem;">
-                                <span class="status-indicator status-warning"></span>
-                                <span style="color: #f39c12;">High Demand</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="service-category">
-                    <h3>Digital Strategy & Consulting</h3>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
-                        <div class="strategy-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                            <h4>Technology Assessment</h4>
-                            <p>Comprehensive review of your current technology stack and recommendations for improvement.</p>
-                            <div class="tiny-click-target" onclick="showDetails('tech-assessment')" style="background: #3498db; color: white; text-align: center; border-radius: 3px; cursor: pointer; margin-top: 1rem;">
-                                Learn More
-                            </div>
-                        </div>
-                        
-                        <div class="strategy-card" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                            <h4>Digital Transformation</h4>
-                            <p>End-to-end digital transformation planning and implementation support.</p>
-                            <div class="tiny-click-target" onclick="showDetails('digital-transformation')" style="background: #3498db; color: white; text-align: center; border-radius: 3px; cursor: pointer; margin-top: 1rem;">
-                                Learn More
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section style="padding: 4rem 0; background: #f8f9fa;">
-            <div class="container">
-                <h2>Process Overview</h2>
                 
-                <!-- Issue: Steps not properly structured, poor focus order -->
-                <div style="display: flex; justify-content: space-between; margin: 3rem 0; position: relative;">
-                    <div class="process-step" style="text-align: center; flex: 1;" tabindex="3">
-                        <div style="width: 60px; height: 60px; background: #3498db; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">1</div>
-                        <h4>Discovery</h4>
-                        <p>We learn about your business goals and requirements</p>
-                    </div>
-                    
-                    <div class="process-step" style="text-align: center; flex: 1;" tabindex="1">
-                        <div style="width: 60px; height: 60px; background: #27ae60; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">2</div>
-                        <h4>Planning</h4>
-                        <p>Detailed project planning and timeline development</p>
-                    </div>
-                    
-                    <div class="process-step" style="text-align: center; flex: 1;" tabindex="2">
-                        <div style="width: 60px; height: 60px; background: #e74c3c; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">3</div>
-                        <h4>Development</h4>
-                        <p>Agile development with regular progress updates</p>
-                    </div>
-                    
-                    <div class="process-step" style="text-align: center; flex: 1;">
-                        <div style="width: 60px; height: 60px; background: #f39c12; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">4</div>
-                        <h4>Launch</h4>
-                        <p>Deployment and ongoing support</p>
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-6" style="min-height: 400px; display: flex; align-items: center; justify-content: center;">
+                                    
+                                    <img src="images/sustainability-chart.svg" alt="Nachhaltigkeits-Audit Diagramm" style="width: 100%; max-height: 400px; object-fit: contain;">
+                                </div>
+                                <div class="col-6">
+                                    <div class="card-body" style="padding: 3rem;">
+                                        <h2 data-en="Sustainability Audit" data-de="Nachhaltigkeits-Audit">Sustainability Audit</h2>
+                                        <p style="font-size: 1.1rem;" data-en="Comprehensive assessment of your office's environmental impact" data-de="Umfassende Bewertung der Umweltauswirkungen Ihres Büros">Comprehensive assessment of your office's environmental impact</p>
+                                        
+                                        <h3 class="mt-4" data-en="Audit Process:" data-de="Audit-Prozess:">Audit Process:</h3>
+                                        
+                                        <ul style="list-style: none; padding: 0;">
+                                            <li>⓵ Initial consultation</li>
+                                            <li>⓶ On-site inspection</li>
+                                            <li>⓷ Data analysis</li>
+                                            <li>⓸ Report generation</li>
+                                            <li>⓹ Implementation support</li>
+                                        </ul>
+                                        
+                                        <div class="mt-4">
+                                            <span style="font-size: 2rem; color: var(--primary-green); font-weight: bold;">€899</span>
+                                            <span style="color: #666;"> / per audit</span>
+                                        </div>
+                                        
+                                        <a href="services/sustainability-audit.html" class="btn btn-primary btn-lg mt-3" data-en="Schedule Audit" data-de="Audit planen">Schedule Audit</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section style="padding: 4rem 0;">
-            <div class="container">
-                <h2>Technology Stack</h2>
-                <p>We work with modern, reliable technologies</p>
                 
-                <!-- Issue: Important information as background image -->
-                <div class="tech-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 3rem 0;">
-                    <div style="background: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"150\"><rect width=\"200\" height=\"150\" fill=\"%233498db\"/><text x=\"100\" y=\"75\" text-anchor=\"middle\" fill=\"white\" font-size=\"16\">Frontend</text></svg>'); padding: 2rem; color: white; border-radius: 8px;">
-                        <h4>Frontend Technologies</h4>
-                        <ul style="list-style: none; padding: 0;">
-                            <li>React & Vue.js</li>
-                            <li>TypeScript</li>
-                            <li>Modern CSS</li>
-                        </ul>
+                <div class="row mb-5">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="card-body" style="padding: 3rem;">
+                                        <h2 data-en="Team Training" data-de="Team-Schulung">Team Training</h2>
+                                        <p style="font-size: 1.1rem;" data-en="Educational workshops on sustainable office practices" data-de="Bildungsworkshops zu nachhaltigen Büropraktiken">Educational workshops on sustainable office practices</p>
+                                        
+                                        <h3 class="mt-4" data-en="Training Topics:" data-de="Schulungsthemen:">Training Topics:</h3>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <ul>
+                                                    <li data-en="Waste reduction" data-de="Abfallreduzierung">Waste reduction</li>
+                                                    <li data-en="Energy efficiency" data-de="Energieeffizienz">Energy efficiency</li>
+                                                    <li data-en="Green procurement" data-de="Grüne Beschaffung">Green procurement</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-6">
+                                                <ul>
+                                                    <li data-en="Wellness programs" data-de="Wellness-Programme">Wellness programs</li>
+                                                    <li data-en="Remote work best practices" data-de="Best Practices für Remote-Arbeit">Remote work best practices</li>
+                                                    <li data-en="Sustainable commuting" data-de="Nachhaltiges Pendeln">Sustainable commuting</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mt-4">
+                                            <span style="font-size: 2rem; color: var(--primary-green); font-weight: bold;">€299</span>
+                                            <span style="color: #666;"> / per session</span>
+                                        </div>
+                                        
+                                        
+                                        <button class="btn btn-primary btn-lg mt-3" onclick="openModal()" data-en="View Courses" data-de="Kurse ansehen">View Courses</button>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <img src="images/team-training.svg" alt="Team training workshop" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div style="background: #27ae60; padding: 2rem; color: white; border-radius: 8px;">
-                        <h4>Backend Technologies</h4>
-                        <ul>
-                            <li>Node.js & Python</li>
-                            <li>PostgreSQL & MongoDB</li>
-                            <li>AWS & Docker</li>
-                        </ul>
-                    </div>
+                </div>
+                
+                
+                <h2 class="text-center mb-4" data-en="Service Comparison" data-de="Service-Vergleich">Service Comparison</h2>
+                
+                <table style="width: 100%; border-collapse: collapse; background: white; box-shadow: var(--shadow-sm);">
+                    <tr style="background: var(--light-green);">
+                        <td style="padding: 1rem; font-weight: bold;">Merkmal</td>
+                        <td style="padding: 1rem; text-align: center; font-weight: bold;">Beratung</td>
+                        <td style="padding: 1rem; text-align: center; font-weight: bold;">Audit</td>
+                        <td style="padding: 1rem; text-align: center; font-weight: bold;">Schulung</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border-top: 1px solid #ddd;">Vor-Ort-Besuch</td>
+                        <td style="padding: 1rem; text-align: center; border-top: 1px solid #ddd;">✓</td>
+                        <td style="padding: 1rem; text-align: center; border-top: 1px solid #ddd;">✓</td>
+                        <td style="padding: 1rem; text-align: center; border-top: 1px solid #ddd;">Optional</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border-top: 1px solid #ddd;">Individueller Bericht</td>
+                        <td style="padding: 1rem; text-align: center; border-top: 1px solid #ddd;">✓</td>
+                        <td style="padding: 1rem; text-align: center; border-top: 1px solid #ddd;">✓</td>
+                        <td style="padding: 1rem; text-align: center; border-top: 1px solid #ddd;">✗</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border-top: 1px solid #ddd;">Nachbetreuung</td>
+                        <td style="padding: 1rem; text-align: center; border-top: 1px solid #ddd;">3 Monate</td>
+                        <td style="padding: 1rem; text-align: center; border-top: 1px solid #ddd;">1 Monat</td>
+                        <td style="padding: 1rem; text-align: center; border-top: 1px solid #ddd;">2 Wochen</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; border-top: 1px solid #ddd;">Teamgröße</td>
+                        <td style="padding: 1rem; text-align: center; border-top: 1px solid #ddd;">Unbegrenzt</td>
+                        <td style="padding: 1rem; text-align: center; border-top: 1px solid #ddd;">Unbegrenzt</td>
+                        <td style="padding: 1rem; text-align: center; border-top: 1px solid #ddd;">Bis zu 30</td>
+                    </tr>
+                </table>
+                
+                
+                <div class="text-center py-5">
+                    <h2 data-en="Ready to Transform Your Workspace?" data-de="Bereit, Ihren Arbeitsplatz zu verwandeln?">Ready to Transform Your Workspace?</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;" data-en="Get started with a free consultation" data-de="Beginnen Sie mit einer kostenlosen Beratung">Get started with a free consultation</p>
+                    <a href="contact.html" class="btn btn-accent btn-lg" data-en="Get Started" data-de="Jetzt starten">Jetzt starten</a>
+                    <a href="resources.html" class="btn btn-secondary btn-lg" data-en="Learn More" data-de="Mehr erfahren">Mehr erfahren</a>
                 </div>
             </div>
         </section>
-
-        <!-- Issue: Modal without proper ARIA or focus management -->
-        <div id="quoteModal" class="modal">
-            <div class="modal-content">
-                <h3>Request a Quote</h3>
-                <form onsubmit="return TechFlow.submitContactForm(this)">
-                    <div>
-                        <label>Service:</label>
-                        <select name="service" required>
-                            <option value="">Select a service...</option>
-                            <option value="web-development">Web Development</option>
-                            <option value="mobile-apps">Mobile Apps</option>
-                            <option value="consulting">Consulting</option>
-                        </select>
-                    </div>
-                    
-                    <div>
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    
-                    <div>
-                        <input type="email" placeholder="Email Address" required>
-                    </div>
-                    
-                    <div>
-                        <textarea placeholder="Project Description" rows="4" required></textarea>
-                    </div>
-                    
-                    <div>
-                        <input type="text" class="auto-advance" maxlength="3" placeholder="Budget (1/3)">
-                        <input type="text" class="auto-advance" maxlength="3" placeholder="K - (2/3)">  
-                        <input type="text" class="auto-advance" maxlength="3" placeholder="Range (3/3)">
-                    </div>
-                    
-                    <div style="margin-top: 2rem;">
-                        <button type="submit">Send Quote Request</button>
-                        <button type="button" onclick="closeModal('quoteModal')" style="margin-left: 1rem; background: #6c757d;">Cancel</button>
-                    </div>
-                </form>
-            </div>
-        </div>
     </main>
-
-    <footer class="footer">
+    
+    
+    <footer class="footer py-5" style="background: var(--dark-gray); color: white;" role="contentinfo">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>TechFlow Digital</h4>
-                    <p>Innovative web solutions for modern businesses.</p>
+            <div class="row">
+                <div class="col-3">
+                    <h4 style="color: white;">GreenLeaf</h4>
+                    <p>Nachhaltige Bürolösungen für moderne Unternehmen mit Umweltverantwortung.</p>
                 </div>
-                
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                <div class="col-3">
+                    <h4 style="color: white;">Produkte</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="products/furniture.html">Büromöbel</a></li>
+                        <li><a href="products/supplies.html">Büromaterial</a></li>
+                        <li><a href="products/technology.html">Technologie</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h4 style="color: white;">Dienstleistungen</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="services/workspace-consulting.html">Arbeitsplatz-Beratung</a></li>
+                        <li><a href="services/sustainability-audit.html">Nachhaltigkeits-Audit</a></li>
+                        <li><a href="services/training.html">Team-Schulung</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h4 style="color: white;">Support</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="contact.html">Kontaktieren Sie uns</a></li>
+                        <li><a href="resources/downloads.html">Downloads</a></li>
+                        <li><a href="resources/blog.html">Blog</a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; 2024 TechFlow Digital. All rights reserved.</p>
+            <div class="footer-bottom mt-4 pt-4" style="border-top: 1px solid #495057;">
+                <div class="row">
+                    <div class="col-6">
+                        <p>&copy; 2024 GreenLeaf Office Solutions. Alle Rechte vorbehalten.</p>
+                    </div>
+                    <div class="col-6 text-right">
+                        <a href="privacy.html">Datenschutz</a> |
+                        <a href="terms.html">Nutzungsbedingungen</a> |
+                        <a href="accessibility.html">Barrierefreiheit</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-
-    <script>
-        function calculateEstimate() {
-            // Issue: Calculation results not announced to screen readers
-            console.log('Estimate updated');
-        }
-        
-        function showDetails(service) {
-            // Issue: Details shown without proper focus management
-            alert('More details about ' + service);
-        }
-    </script>
-    <script src="js/scripts.js"></script>
+    
+    <script src="js/main.js"></script>
 </body>
 </html>

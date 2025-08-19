@@ -1,0 +1,51 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  
+  <rect width="300" height="200" fill="#f8f9fa"/>
+  
+  
+  <ellipse cx="150" cy="170" rx="40" ry="10" fill="#424242"/>
+  
+  
+  <ellipse cx="150" cy="168" rx="30" ry="8" fill="#666"/>
+  <circle cx="150" cy="168" r="15" fill="#1976d2" opacity="0.3"/>
+  <text x="150" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">⚡</text>
+  
+  
+  <rect x="145" y="120" width="10" height="50" fill="#757575" rx="5"/>
+  
+  
+  <circle cx="150" cy="125" r="8" fill="#616161"/>
+  
+  
+  <ellipse cx="150" cy="100" rx="35" ry="15" fill="#424242"/>
+  <ellipse cx="150" cy="95" rx="30" ry="12" fill="#fff" opacity="0.9"/>
+  
+  
+  <circle cx="130" cy="95" r="2" fill="#4caf50"/>
+  <circle cx="140" cy="95" r="2" fill="#4caf50"/>
+  <circle cx="160" cy="95" r="2" fill="#4caf50"/>
+  <circle cx="170" cy="95" r="2" fill="#4caf50"/>
+  
+  
+  <line x1="150" y1="85" x2="150" y2="70" stroke="#ffeb3b" stroke-width="2" opacity="0.7"/>
+  <line x1="135" y1="90" x2="125" y2="80" stroke="#ffeb3b" stroke-width="2" opacity="0.7"/>
+  <line x1="165" y1="90" x2="175" y2="80" stroke="#ffeb3b" stroke-width="2" opacity="0.7"/>
+  <line x1="120" y1="95" x2="105" y2="95" stroke="#ffeb3b" stroke-width="2" opacity="0.7"/>
+  <line x1="180" y1="95" x2="195" y2="95" stroke="#ffeb3b" stroke-width="2" opacity="0.7"/>
+  
+  
+  <circle cx="120" cy="130" r="4" fill="#2196f3"/>
+  <circle cx="180" cy="130" r="4" fill="#ff9800"/>
+  
+  
+  <rect x="200" y="40" width="30" height="20" fill="#4caf50" rx="3"/>
+  <text x="215" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">LED</text>
+  
+  
+  <circle cx="80" cy="50" r="12" fill="#1976d2"/>
+  <text x="80" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white">📱</text>
+  
+  
+  <text x="150" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c5530">SmartLight Pro</text>
+  <text x="150" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">LED-Lampe mit Ladestation</text>
+</svg>

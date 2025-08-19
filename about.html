@@ -1,283 +1,374 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - TechFlow Digital</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Erfahren Sie mehr über GreenLeafs Mission, nachhaltige Bürolösungen für moderne Unternehmen zu schaffen">
+    <title>Über uns - GreenLeaf Bürolösungen</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="nav-brand">
-                <img src="images/logo.svg" alt="TechFlow Digital" width="60" height="40">
-                <span class="brand-text">TechFlow Digital</span>
+    
+    <a href="#main-content" class="skip-nav">Zum Hauptinhalt springen</a>
+    
+    
+    <header class="header" role="banner">
+        
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <span>📞 Kostenlose Beratung: +49 (0) 30 123 456 789</span>
+                    </div>
+                    <div class="col text-right">
+                        <span>🚚 Kostenloser Versand ab €75</span>
+                    </div>
+                </div>
             </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="about.html" aria-current="page" style="color: #888;">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+        </div>
+        
+        
+        <div class="header-main">
+            <div class="container">
+                <nav class="navbar" role="navigation" aria-label="Main navigation">
+                    
+                    <div class="logo">
+                        <img src="images/logo.svg" alt="GreenLeaf Office Solutions" width="40" height="40">
+                        <span>GreenLeaf</span>
+                    </div>
+                    
+                    
+                    <ul class="nav-menu" role="menubar">
+                        <li class="nav-item" role="none">
+                            <a href="index.html" class="nav-link" role="menuitem">Startseite</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="products.html" class="nav-link" role="menuitem">Produkte</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="services.html" class="nav-link" role="menuitem">Dienstleistungen</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="resources.html" class="nav-link" role="menuitem">Ressourcen</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="about.html" class="nav-link" role="menuitem" aria-current="page">Über uns</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="contact.html" class="nav-link" role="menuitem">Kontakt</a>
+                        </li>
+                    </ul>
+                    
+                    
+                    <div class="header-actions">
+                        
+                        <form class="search-form" role="search" aria-label="Site search">
+                            <input type="search" name="q" placeholder="Suchen..." class="form-control" aria-label="Suchen">
+                            <button type="submit" class="btn btn-primary" aria-label="Suche absenden">
+                                🔍
+                            </button>
+                        </form>
+                        
+                        
+                        <a href="cart.html" class="btn btn-secondary" aria-label="Warenkorb">
+                            🛒 Warenkorb
+                            <span class="cart-badge" aria-label="Artikel im Warenkorb">0</span>
+                        </a>
+                        
+                        
+                        <a href="account/login.html" class="btn btn-secondary">Anmelden</a>
+                    </div>
+                </nav>
+            </div>
         </div>
     </header>
-
-    <main style="margin-top: 80px;">
-        <section style="padding: 4rem 0;">
+    
+    
+    <main id="main-content" role="main">
+        
+        <section class="page-header py-5" style="background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%); color: white;">
             <div class="container">
-                <div style="text-align: center; margin-bottom: 4rem;">
-                    <h1 style="color: #bbb;">About TechFlow Digital</h1>
-                    <p>Passionate about technology, dedicated to excellence</p>
+                
+                <h1 style="color: #d0e8d0;" data-en="About GreenLeaf" data-de="Über GreenLeaf">Über GreenLeaf</h1>
+                <p style="font-size: 1.2rem;" data-en="Leading the sustainable office revolution since 2015" data-de="Führend in der nachhaltigen Büro-Revolution seit 2015">Führend in der nachhaltigen Büro-Revolution seit 2015</p>
+            </div>
+        </section>
+        
+        
+        <section class="our-story py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <h2 data-en="Our Story" data-de="Unsere Geschichte">Unsere Geschichte</h2>
+                        <p style="font-size: 1.1rem; line-height: 1.8;">GreenLeaf Bürolösungen wurde 2015 aus einer einfachen Beobachtung heraus gegründet: Unternehmen wollten nachhaltiger werden, wussten aber nicht, wo sie anfangen sollten.</p>
+                        <p>Unsere Gründer, Umweltwissenschaftler, die zu Unternehmern wurden, sahen eine Gelegenheit, die Lücke zwischen Unternehmensverantwortung und praktischen Lösungen zu schließen. Was als kleiner Katalog umweltfreundlicher Büromaterialien begann, ist zu einer umfassenden Plattform für nachhaltige Arbeitsplatz-Transformation gewachsen.</p>
+                        <p>Heute betreuen wir über 5.000 Unternehmen in ganz Europa und helfen ihnen, ihren ökologischen Fußabdruck zu reduzieren und gleichzeitig gesündere, produktivere Arbeitsumgebungen zu schaffen.</p>
+                        
+                        
+                        <div class="mt-4">
+                            <span style="color: green; font-size: 2rem; font-weight: bold;">75%</span>
+                            <p>Durchschnittliche Abfallreduzierung für unsere Kunden</p>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        
+                        <img src="images/text-as-image.png" alt="Unternehmenswerte" style="width: 100%; border-radius: 8px;">
+                    </div>
                 </div>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 4rem; align-items: center;">
-                    <div>
-                        <h2>Our Story</h2>
-                        <p style="margin-bottom: 1.5rem;">Founded in 2016, TechFlow Digital emerged from a simple belief: technology should empower businesses, not complicate them. What started as a small team of developers has grown into a full-service digital agency.</p>
-                        <p style="margin-bottom: 1.5rem;">We've helped over 200 companies transform their digital presence, from startups to Fortune 500 enterprises.</p>
-                        
-                        <!-- Issue: Important information only conveyed by color -->
-                        <div style="margin-top: 2rem;">
-                            <h3>Our Values</h3>
-                            <ul style="list-style: none; padding: 0;">
-                                <li style="margin: 0.5rem 0; color: #3498db;">💡 Innovation First</li>
-                                <li style="margin: 0.5rem 0; color: #27ae60;">🤝 Client Partnership</li>
-                                <li style="margin: 0.5rem 0; color: #e74c3c;">⚡ Quality & Speed</li>
-                                <li style="margin: 0.5rem 0; color: #f39c12;">🎯 Results Driven</li>
-                            </ul>
+            </div>
+        </section>
+        
+        
+        <section class="mission py-5" style="background: var(--light-gray);">
+            <div class="container">
+                <h2 class="text-center mb-5" data-en="Our Mission & Values" data-de="Unsere Mission & Werte">Unsere Mission & Werte</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                
+                                <div style="font-size: 3rem;">🌱</div>
+                                <h3>Nachhaltigkeit zuerst</h3>
+                                <p>Jede Entscheidung, die wir treffen, berücksichtigt die Umweltauswirkungen. Von der Produktbeschaffung bis zu den Versandmethoden leitet Nachhaltigkeit unsere Entscheidungen.</p>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 400px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                            <span style="color: white; font-size: 24px; text-align: center;">Our Team at Work<br><span style="font-size: 16px;">Collaborative Innovation</span></span>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div style="font-size: 3rem;">🤝</div>
+                                <h3>Partnerschaftsansatz</h3>
+                                <p>Wir verkaufen nicht nur Produkte; wir arbeiten mit Unternehmen zusammen, um nachhaltige Veränderungen in ihrer Arbeitsplatzkultur und -praxis zu schaffen.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div style="font-size: 3rem;">💡</div>
+                                <h3>Innovation & Qualität</h3>
+                                <p>Kontinuierliche Forschung und Entwicklung neuer Lösungen, die keine Kompromisse bei Qualität oder Funktionalität eingehen.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Team Section -->
-                <section style="margin: 4rem 0;">
-                    <h2 style="text-align: center; margin-bottom: 3rem;">Meet Our Team</h2>
+            </div>
+        </section>
+        
+        
+        <section class="team py-5">
+            <div class="container">
+                <h2 class="text-center mb-5" data-en="Meet Our Leadership Team" data-de="Lernen Sie unser Führungsteam kennen">Meet Our Leadership Team</h2>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="images/emma-schmidt.svg" class="card-img" alt="CEO portrait">
+                            <div class="card-body text-center">
+                                <h3>Emma Schmidt</h3>
+                                
+                                <p style="color: #b0b0b0;">Chief Executive Officer</p>
+                                <p>15+ years in sustainable business development</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="images/marcus-weber.svg" class="card-img" alt="CTO portrait">
+                            <div class="card-body text-center">
+                                <h3>Marcus Weber</h3>
+                                <p style="color: #b0b0b0;">Chief Technology Officer</p>
+                                <p>Expert in green technology and innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="images/sofia-martinez.svg" class="card-img" alt="COO portrait">
+                            <div class="card-body text-center">
+                                <h3>Sofia Martinez</h3>
+                                <p style="color: #b0b0b0;">Chief Operations Officer</p>
+                                <p>Specialist in sustainable supply chain management</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="images/james-chen.svg" class="card-img" alt="Head of Sustainability portrait">
+                            <div class="card-body text-center">
+                                <h3>James Chen</h3>
+                                <p style="color: #b0b0b0;">Head of Sustainability</p>
+                                <p>Environmental scientist and policy expert</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="achievements py-5" style="background: var(--primary-green); color: white;">
+            <div class="container">
+                <h2 class="text-center mb-5" style="color: white;" data-en="Our Impact" data-de="Unsere Wirkung">Our Impact</h2>
+                <div class="row text-center">
+                    <div class="col-3">
+                        
+                        <div style="font-size: 3rem; font-weight: bold;">5,000+</div>
+                        <p>Betreute Unternehmen</p>
+                    </div>
+                    <div class="col-3">
+                        <div style="font-size: 3rem; font-weight: bold;">2.5M</div>
+                        <p>Tonnen Abfall umgeleitet</p>
+                    </div>
+                    <div class="col-3">
+                        <div style="font-size: 3rem; font-weight: bold;">98%</div>
+                        <p>Kundenzufriedenheit</p>
+                    </div>
+                    <div class="col-3">
+                        <div style="font-size: 3rem; font-weight: bold;">15</div>
+                        <p>Branchenauszeichnungen</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="certifications py-5">
+            <div class="container">
+                <h2 class="text-center mb-5" data-en="Certifications & Partnerships" data-de="Zertifizierungen & Partnerschaften">Certifications & Partnerships</h2>
+                <div class="row">
+                    <div class="col-12">
+                        
+                        <div class="text-center">
+                            <img src="images/logo.svg" alt="" style="width: 100px; height: 100px; margin: 0 2rem; display: inline-block;">
+                            <img src="images/logo.svg" alt="" style="width: 100px; height: 100px; margin: 0 2rem; display: inline-block;">
+                            <img src="images/logo.svg" alt="" style="width: 100px; height: 100px; margin: 0 2rem; display: inline-block;">
+                            <img src="images/logo.svg" alt="" style="width: 100px; height: 100px; margin: 0 2rem; display: inline-block;">
+                        </div>
+                        <p class="text-center mt-4">Certified B Corporation • ISO 14001 Environmental Management • FSC Certified • Carbon Neutral Since 2020</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="timeline py-5" style="background: var(--light-gray);">
+            <div class="container">
+                <h2 class="text-center mb-5" data-en="Our Journey" data-de="Unsere Reise">Our Journey</h2>
+                
+                <div style="position: relative; padding: 2rem 0;">
+                    <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--primary-green);"></div>
                     
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
-                        <!-- Team Member 1 -->
-                        <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
-                            <img src="images/team1.svg" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 1.5rem;">
-                            <h3>Sarah Chen</h3>
-                            <p style="color: #3498db; margin-bottom: 1rem;">CEO & Founder</p>
-                            <p style="color: #666; margin-bottom: 1.5rem;">Former Google engineer with 12 years of experience in scalable web applications.</p>
-                            
-                            <!-- Issue: Social links without keyboard access -->
-                            <div style="display: flex; justify-content: center; gap: 1rem;">
-                                <div onclick="openSocial('linkedin')" style="cursor: pointer; color: #0077b5;">LinkedIn</div>
-                                <div onclick="openSocial('twitter')" style="cursor: pointer; color: #1da1f2;">Twitter</div>
-                            </div>
-                            
-                            <!-- Issue: Bio expansion without proper ARIA -->
-                            <div style="margin-top: 1rem;">
-                                <div onclick="toggleBio('sarah')" style="cursor: pointer; color: #3498db; text-decoration: underline;">
-                                    Read Full Bio
-                                </div>
-                                <div id="sarahBio" style="display: none; margin-top: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 5px;">
-                                    <p>Sarah holds a Master's in Computer Science from Stanford and has led development teams at major tech companies. She founded TechFlow Digital with a vision to democratize enterprise-level technology for businesses of all sizes.</p>
-                                </div>
-                            </div>
+                    <div class="row mb-4">
+                        <div class="col-5 text-right">
+                            <h3>2015</h3>
+                            <p>GreenLeaf founded with 10 products</p>
                         </div>
-
-                        <!-- Team Member 2 -->
-                        <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
-                            <div style="width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 1.5rem; background: #27ae60; display: flex; align-items: center; justify-content: center;">
-                                <span style="color: white; font-size: 18px; font-weight: bold;">MR</span>
-                            </div>
-                            <h3>Michael Rodriguez</h3>
-                            <p style="color: #27ae60; margin-bottom: 1rem;">CTO</p>
-                            <p style="color: #666; margin-bottom: 1.5rem;">Architecture specialist with expertise in cloud infrastructure and microservices.</p>
-                            
-                            <!-- Issue: Rating system only accessible by mouse -->
-                            <div style="margin: 1rem 0;">
-                                <p style="font-size: 0.875rem; margin-bottom: 0.5rem;">Team Member Rating:</p>
-                                <div class="star-rating" style="display: flex; justify-content: center; gap: 0.25rem;">
-                                    <span onclick="rate(1)" style="cursor: pointer; font-size: 1.5rem; color: #f39c12;">★</span>
-                                    <span onclick="rate(2)" style="cursor: pointer; font-size: 1.5rem; color: #f39c12;">★</span>
-                                    <span onclick="rate(3)" style="cursor: pointer; font-size: 1.5rem; color: #f39c12;">★</span>
-                                    <span onclick="rate(4)" style="cursor: pointer; font-size: 1.5rem; color: #f39c12;">★</span>
-                                    <span onclick="rate(5)" style="cursor: pointer; font-size: 1.5rem; color: #ddd;">★</span>
-                                </div>
-                            </div>
+                        <div class="col-2 text-center">
+                            <div style="width: 20px; height: 20px; background: var(--primary-green); border-radius: 50%; margin: 0 auto;"></div>
                         </div>
-
-                        <!-- Team Member 3 -->
-                        <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
-                            <div style="width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 1.5rem; background: #e74c3c; display: flex; align-items: center; justify-content: center;">
-                                <span style="color: white; font-size: 18px; font-weight: bold;">LK</span>
-                            </div>
-                            <h3>Lisa Kim</h3>
-                            <p style="color: #e74c3c; margin-bottom: 1rem;">Head of Design</p>
-                            <p style="color: #666; margin-bottom: 1.5rem;">UX/UI designer passionate about creating intuitive user experiences.</p>
-                            
-                            <!-- Issue: Contact form that auto-submits on focus -->
-                            <form style="margin-top: 1rem;">
-                                <input type="email" placeholder="Email Lisa directly" 
-                                       onfocus="setTimeout(() => this.form.submit(), 2000)" 
-                                       style="width: 100%; padding: 0.5rem; margin-bottom: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
-                                <p style="font-size: 0.75rem; color: #666;">Auto-sends after 2 seconds when focused</p>
-                            </form>
-                        </div>
+                        <div class="col-5"></div>
                     </div>
-                </section>
-
-                <!-- Company Timeline -->
-                <section style="margin: 4rem 0; padding: 3rem; background: #f8f9fa; border-radius: 10px;">
-                    <h2 style="text-align: center; margin-bottom: 3rem;">Our Journey</h2>
                     
-                    <!-- Issue: Timeline with poor focus order -->
-                    <div class="timeline" style="position: relative;">
-                        <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: #3498db; transform: translateX(-50%);"></div>
-                        
-                        <div class="timeline-item" style="position: relative; margin: 2rem 0; padding-left: 60%;" tabindex="4">
-                            <div style="position: absolute; left: 50%; width: 20px; height: 20px; background: #3498db; border-radius: 50%; transform: translateX(-50%);"></div>
-                            <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                                <h4>2016 - Founded</h4>
-                                <p>TechFlow Digital established with 3 founding members</p>
-                            </div>
+                    <div class="row mb-4">
+                        <div class="col-5"></div>
+                        <div class="col-2 text-center">
+                            <div style="width: 20px; height: 20px; background: var(--primary-green); border-radius: 50%; margin: 0 auto;"></div>
                         </div>
-                        
-                        <div class="timeline-item" style="position: relative; margin: 2rem 0; padding-right: 60%;" tabindex="1">
-                            <div style="position: absolute; left: 50%; width: 20px; height: 20px; background: #27ae60; border-radius: 50%; transform: translateX(-50%);"></div>
-                            <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                                <h4>2018 - First Major Contract</h4>
-                                <p>Secured partnership with Fortune 500 retail company</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item" style="position: relative; margin: 2rem 0; padding-left: 60%;" tabindex="3">
-                            <div style="position: absolute; left: 50%; width: 20px; height: 20px; background: #f39c12; border-radius: 50%; transform: translateX(-50%);"></div>
-                            <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                                <h4>2021 - Team Expansion</h4>
-                                <p>Grew to 25 team members across multiple specializations</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item" style="position: relative; margin: 2rem 0; padding-right: 60%;" tabindex="2">
-                            <div style="position: absolute; left: 50%; width: 20px; height: 20px; background: #e74c3c; border-radius: 50%; transform: translateX(-50%);"></div>
-                            <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                                <h4>2024 - Innovation Award</h4>
-                                <p>Recognized as "Digital Agency of the Year" by Tech Weekly</p>
-                            </div>
+                        <div class="col-5">
+                            <h3>2018</h3>
+                            <p>Launched consulting services</p>
                         </div>
                     </div>
-                </section>
-
-                <!-- Culture Section -->
-                <section style="margin: 4rem 0;">
-                    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; align-items: center;">
-                        <div>
-                            <h2>Our Culture</h2>
-                            <p style="margin-bottom: 1.5rem;">We believe in fostering creativity, embracing challenges, and maintaining a healthy work-life balance. Our office environment encourages collaboration and innovation.</p>
-                            
-                            <!-- Issue: Image slider with only mouse controls -->
-                            <div style="border: 2px solid #ddd; border-radius: 8px; overflow: hidden;">
-                                <div class="office-slider" style="display: flex; transition: transform 0.3s;">
-                                    <div style="min-width: 100%; height: 200px; background: #3498db; display: flex; align-items: center; justify-content: center; color: white;">
-                                        Office Space - Open Collaboration Area
-                                    </div>
-                                    <div style="min-width: 100%; height: 200px; background: #27ae60; display: flex; align-items: center; justify-content: center; color: white;">
-                                        Office Space - Quiet Work Zones
-                                    </div>
-                                    <div style="min-width: 100%; height: 200px; background: #e74c3c; display: flex; align-items: center; justify-content: center; color: white;">
-                                        Office Space - Meeting Rooms
-                                    </div>
-                                </div>
-                                <div style="display: flex; justify-content: center; padding: 1rem; gap: 0.5rem;">
-                                    <div onclick="slideToImage(0)" style="cursor: pointer; width: 12px; height: 12px; border-radius: 50%; background: #3498db;"></div>
-                                    <div onclick="slideToImage(1)" style="cursor: pointer; width: 12px; height: 12px; border-radius: 50%; background: #ddd;"></div>
-                                    <div onclick="slideToImage(2)" style="cursor: pointer; width: 12px; height: 12px; border-radius: 50%; background: #ddd;"></div>
-                                </div>
-                            </div>
+                    
+                    <div class="row mb-4">
+                        <div class="col-5 text-right">
+                            <h3>2020</h3>
+                            <p>Achieved carbon neutrality</p>
                         </div>
-                        
-                        <div>
-                            <!-- Issue: Live updating employee count -->
-                            <div style="text-align: center; padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                                <h3>Team Stats</h3>
-                                <div style="margin: 1.5rem 0;">
-                                    <div id="employeeCount" style="font-size: 3rem; font-weight: bold; color: #3498db;">28</div>
-                                    <div>Current Employees</div>
-                                </div>
-                                <div style="margin: 1.5rem 0;">
-                                    <div style="font-size: 2rem; font-weight: bold; color: #27ae60;">15+</div>
-                                    <div>Countries Served</div>
-                                </div>
-                                <div id="onlineNow" style="margin-top: 1rem; padding: 1rem; background: #e8f4f8; border-radius: 5px;">
-                                    <span style="color: #27ae60;">●</span> 23 team members online now
-                                </div>
-                            </div>
+                        <div class="col-2 text-center">
+                            <div style="width: 20px; height: 20px; background: var(--primary-green); border-radius: 50%; margin: 0 auto;"></div>
+                        </div>
+                        <div class="col-5"></div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-5"></div>
+                        <div class="col-2 text-center">
+                            <div style="width: 20px; height: 20px; background: var(--accent-orange); border-radius: 50%; margin: 0 auto;"></div>
+                        </div>
+                        <div class="col-5">
+                            <h3>2024</h3>
+                            <p>5,000+ companies served</p>
                         </div>
                     </div>
-                </section>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="cta py-5">
+            <div class="container text-center">
+                <h2 data-en="Join the Sustainable Office Movement" data-de="Treten Sie der nachhaltigen Büro-Bewegung bei">Join the Sustainable Office Movement</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;" data-en="Let's create a better workspace together" data-de="Lassen Sie uns gemeinsam einen besseren Arbeitsplatz schaffen">Let's create a better workspace together</p>
+                
+                <a href="contact.html" class="btn btn-accent btn-lg">Get Started</a>
+                <a href="contact.html" class="btn btn-secondary btn-lg">Contact Us</a>
             </div>
         </section>
     </main>
-
-    <footer class="footer">
+    
+    
+    <footer class="footer py-5" style="background: var(--dark-gray); color: white;" role="contentinfo">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>TechFlow Digital</h4>
-                    <p>Innovative web solutions for modern businesses.</p>
+            <div class="row">
+                <div class="col-3">
+                    <h4 style="color: white;">GreenLeaf</h4>
+                    <p>Nachhaltige Bürolösungen für moderne Unternehmen mit Umweltverantwortung.</p>
                 </div>
-                
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                <div class="col-3">
+                    <h4 style="color: white;">Produkte</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="products/furniture.html">Büromöbel</a></li>
+                        <li><a href="products/supplies.html">Büromaterial</a></li>
+                        <li><a href="products/technology.html">Technologie</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h4 style="color: white;">Dienstleistungen</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="services/workspace-consulting.html">Arbeitsplatz-Beratung</a></li>
+                        <li><a href="services/sustainability-audit.html">Nachhaltigkeits-Audit</a></li>
+                        <li><a href="services/training.html">Team-Schulung</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h4 style="color: white;">Support</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="contact.html">Kontaktieren Sie uns</a></li>
+                        <li><a href="resources/downloads.html">Downloads</a></li>
+                        <li><a href="resources/blog.html">Blog</a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p>&copy; 2024 TechFlow Digital. All rights reserved.</p>
+            <div class="footer-bottom mt-4 pt-4" style="border-top: 1px solid #495057;">
+                <div class="row">
+                    <div class="col-6">
+                        <p>&copy; 2024 GreenLeaf Office Solutions. Alle Rechte vorbehalten.</p>
+                    </div>
+                    <div class="col-6 text-right">
+                        <a href="privacy.html">Datenschutz</a> |
+                        <a href="terms.html">Nutzungsbedingungen</a> |
+                        <a href="accessibility.html">Barrierefreiheit</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-
-    <script>
-        function toggleBio(person) {
-            const bio = document.getElementById(person + 'Bio');
-            bio.style.display = bio.style.display === 'none' ? 'block' : 'none';
-            // Issue: State change not announced to screen readers
-        }
-        
-        function rate(stars) {
-            // Issue: Rating interaction not accessible
-            console.log('Rated ' + stars + ' stars');
-        }
-        
-        function slideToImage(index) {
-            const slider = document.querySelector('.office-slider');
-            slider.style.transform = `translateX(-${index * 100}%)`;
-            // Issue: Slide change not announced
-        }
-        
-        // Live updating stats (timing issue)
-        setInterval(() => {
-            const countElement = document.getElementById('employeeCount');
-            let current = parseInt(countElement.textContent);
-            if (Math.random() > 0.8) {
-                current += Math.random() > 0.5 ? 1 : -1;
-                countElement.textContent = Math.max(25, Math.min(35, current));
-            }
-            
-            const onlineElement = document.getElementById('onlineNow');
-            const onlineCount = Math.floor(Math.random() * 10) + 20;
-            onlineElement.innerHTML = `<span style="color: #27ae60;">●</span> ${onlineCount} team members online now`;
-        }, 8000);
-    </script>
-    <script src="js/scripts.js"></script>
+    
+    <script src="js/main.js"></script>
 </body>
 </html>

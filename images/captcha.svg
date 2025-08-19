@@ -1,0 +1,26 @@
+<svg width="200" height="80" xmlns="http://www.w3.org/2000/svg">
+  
+  <rect width="200" height="80" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
+  
+  
+  <rect x="10" y="10" width="180" height="60" fill="white" stroke="#ddd" stroke-width="1"/>
+  
+  
+  <text x="30" y="45" font-family="monospace" font-size="24" fill="#333" transform="rotate(-5 30 45)">A</text>
+  <text x="55" y="50" font-family="monospace" font-size="24" fill="#666" transform="rotate(8 55 50)">7</text>
+  <text x="80" y="42" font-family="monospace" font-size="24" fill="#333" transform="rotate(-3 80 42)">X</text>
+  <text x="105" y="48" font-family="monospace" font-size="24" fill="#555" transform="rotate(6 105 48)">9</text>
+  <text x="130" y="45" font-family="monospace" font-size="24" fill="#333" transform="rotate(-7 130 45)">K</text>
+  <text x="155" y="47" font-family="monospace" font-size="24" fill="#666" transform="rotate(4 155 47)">3</text>
+  
+  
+  <line x1="20" y1="25" x2="180" y2="35" stroke="#ddd" stroke-width="1"/>
+  <line x1="15" y1="55" x2="185" y2="45" stroke="#eee" stroke-width="1"/>
+  <line x1="25" y1="65" x2="175" y2="25" stroke="#ddd" stroke-width="1"/>
+  
+  
+  <circle cx="45" cy="30" r="1" fill="#ccc"/>
+  <circle cx="85" cy="60" r="1" fill="#ccc"/>
+  <circle cx="125" cy="25" r="1" fill="#ccc"/>
+  <circle cx="165" cy="55" r="1" fill="#ccc"/>
+</svg>
