@@ -205,7 +205,7 @@ const GreenLeaf = {
         
         
         if (!this.validateForm(form)) {
-            this.showNotification('Bitte füllen Sie alle Pflichtfelder aus', 'error');
+            this.showNotification('bitte fehler beheben', 'error');
             return;
         }
         
@@ -308,6 +308,9 @@ const GreenLeaf = {
             modal.setAttribute('aria-hidden', 'false');
             
             
+            this.trapFocus(modal);
+            
+            
             const focusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
             if (focusable) {
                 focusable.focus();
@@ -320,6 +323,44 @@ const GreenLeaf = {
         if (activeModal) {
             activeModal.style.display = 'none';
             activeModal.setAttribute('aria-hidden', 'true');
+            this.removeFocusTrap();
+        }
+    },
+    
+    
+    trapFocus(element) {
+        const focusableElements = element.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        
+        this.focusTrapHandler = (e) => {
+            if (e.key === 'Tab') {
+                if (e.shiftKey) {
+                    if (document.activeElement === firstElement) {
+                        e.preventDefault();
+                        lastElement.focus();
+                    }
+                } else {
+                    if (document.activeElement === lastElement) {
+                        e.preventDefault();
+                        firstElement.focus();
+                    }
+                }
+            }
+        };
+        
+        element.addEventListener('keydown', this.focusTrapHandler);
+    },
+    
+    removeFocusTrap() {
+        if (this.focusTrapHandler) {
+            const activeModal = document.querySelector('.modal[style*="block"], .demo-dialog');
+            if (activeModal) {
+                activeModal.removeEventListener('keydown', this.focusTrapHandler);
+            }
+            this.focusTrapHandler = null;
         }
     },
     
@@ -650,15 +691,25 @@ const GreenLeaf = {
             <h3 style="margin-top: 0; color: var(--primary-green);">🧪 Demo-Seite</h3>
             <p>Diese Seite existiert nur zu Testzwecken und ist nicht implementiert.</p>
             <p>Dies ist ein WCAG 2.2 Testing Playground zur Demonstration von Barrierefreiheitsproblemen.</p>
-            <button class="btn btn-primary" onclick="this.closest('.demo-dialog').remove()" style="margin-top: 1rem;">Verstanden</button>
+            <button class="btn btn-primary" style="margin-top: 1rem;">Verstanden</button>
         `;
         
         dialog.appendChild(content);
         document.body.appendChild(dialog);
         
         
+        this.trapFocus(dialog);
+        
+        
+        const button = content.querySelector('button');
+        if (button) {
+            button.focus();
+        }
+        
+        
         dialog.addEventListener('click', (e) => {
             if (e.target === dialog) {
+                this.removeFocusTrap();
                 dialog.remove();
             }
         });
@@ -666,11 +717,22 @@ const GreenLeaf = {
         
         const handleEscape = (e) => {
             if (e.key === 'Escape') {
+                this.removeFocusTrap();
                 dialog.remove();
                 document.removeEventListener('keydown', handleEscape);
             }
         };
         document.addEventListener('keydown', handleEscape);
+        
+        
+        const closeButton = content.querySelector('button');
+        if (closeButton) {
+            closeButton.addEventListener('click', () => {
+                this.removeFocusTrap();
+                dialog.remove();
+                document.removeEventListener('keydown', handleEscape);
+            });
+        }
     },
     
     

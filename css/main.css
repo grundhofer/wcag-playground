@@ -228,8 +228,7 @@ a:focus {
 }
 
 .btn:focus {
-    outline: 2px solid var(--accent-orange);
-    outline-offset: 2px;
+    outline: none;
 }
 
 .btn-primary {
@@ -310,9 +309,6 @@ a:focus {
     box-shadow: 0 0 0 3px rgba(45, 90, 61, 0.1);
 }
 
-.form-control:invalid {
-    border-color: var(--error-red);
-}
 
 textarea.form-control {
     resize: vertical;

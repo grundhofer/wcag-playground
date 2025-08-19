@@ -1,0 +1,8 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" fill="#2D5A3D" rx="8"/>
+  <polygon points="40,15 50,35 60,15" fill="#A8D8B9"/>
+  <rect x="48" y="35" width="4" height="15" fill="#A8D8B9"/>
+  <text x="50" y="65" text-anchor="middle" fill="white" font-size="12" font-weight="bold">FSC</text>
+  <text x="50" y="78" text-anchor="middle" fill="white" font-size="8">CERTIFIED</text>
+  <text x="50" y="90" text-anchor="middle" fill="#A8D8B9" font-size="6">FORESTRY</text>
+</svg>

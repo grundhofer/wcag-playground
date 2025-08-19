@@ -1,0 +1,39 @@
+<svg width="500" height="300" viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="300" fill="#f8f9fa" rx="12"/>
+  
+  <!-- Title -->
+  <text x="250" y="40" text-anchor="middle" fill="#2d5a3d" font-size="24" font-weight="bold">Unternehmenswerte</text>
+  
+  <!-- Value 1: Nachhaltigkeit -->
+  <circle cx="60" cy="100" r="8" fill="#2d5a3d"/>
+  <text x="80" y="90" fill="#2d5a3d" font-size="16" font-weight="bold">Nachhaltigkeit</text>
+  <text x="80" y="108" fill="#666" font-size="12">Umweltschutz in allem was wir tun</text>
+  
+  <!-- Value 2: Innovation -->
+  <circle cx="60" cy="150" r="8" fill="#2d5a3d"/>
+  <text x="80" y="140" fill="#2d5a3d" font-size="16" font-weight="bold">Innovation</text>
+  <text x="80" y="158" fill="#666" font-size="12">Kreative Lösungen für die Zukunft</text>
+  
+  <!-- Value 3: Qualität -->
+  <circle cx="60" cy="200" r="8" fill="#2d5a3d"/>
+  <text x="80" y="190" fill="#2d5a3d" font-size="16" font-weight="bold">Qualität</text>
+  <text x="80" y="208" fill="#666" font-size="12">Höchste Standards bei allen Produkten</text>
+  
+  <!-- Value 4: Transparenz -->
+  <circle cx="280" cy="100" r="8" fill="#2d5a3d"/>
+  <text x="300" y="90" fill="#2d5a3d" font-size="16" font-weight="bold">Transparenz</text>
+  <text x="300" y="108" fill="#666" font-size="12">Offene und ehrliche Kommunikation</text>
+  
+  <!-- Value 5: Gemeinschaft -->
+  <circle cx="280" cy="150" r="8" fill="#2d5a3d"/>
+  <text x="300" y="140" fill="#2d5a3d" font-size="16" font-weight="bold">Gemeinschaft</text>
+  <text x="300" y="158" fill="#666" font-size="12">Zusammenarbeit für gemeinsame Ziele</text>
+  
+  <!-- Value 6: Verantwortung -->
+  <circle cx="280" cy="200" r="8" fill="#2d5a3d"/>
+  <text x="300" y="190" fill="#2d5a3d" font-size="16" font-weight="bold">Verantwortung</text>
+  <text x="300" y="208" fill="#666" font-size="12">Soziale und ökologische Verpflichtung</text>
+  
+  <!-- Decorative element -->
+  <path d="M 50 250 Q 250 230 450 250" stroke="#a8d8b9" stroke-width="3" fill="none"/>
+</svg>
