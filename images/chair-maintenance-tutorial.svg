@@ -1,0 +1,42 @@
+<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
+  
+  <rect width="400" height="200" fill="#f8f9fa"/>
+  
+  
+  <rect x="150" y="60" width="100" height="80" fill="#424242" rx="15"/>
+  <rect x="160" y="70" width="80" height="60" fill="#616161" rx="10"/>
+  
+  
+  <ellipse cx="200" cy="140" rx="60" ry="20" fill="#424242"/>
+  
+  
+  <rect x="195" y="160" width="10" height="25" fill="#757575"/>
+  
+  
+  <circle cx="170" cy="185" r="8" fill="#9e9e9e"/>
+  <circle cx="200" cy="185" r="8" fill="#9e9e9e"/>
+  <circle cx="230" cy="185" r="8" fill="#9e9e9e"/>
+  
+  
+  <rect x="80" y="120" width="40" height="8" fill="#ff9800" rx="4"/>
+  <rect x="95" y="110" width="10" height="30" fill="#ff6f00"/>
+  
+  
+  <rect x="290" y="110" width="20" height="35" fill="#2196f3" rx="5"/>
+  <rect x="295" y="105" width="10" height="10" fill="#1976d2" rx="2"/>
+  
+  
+  <path d="M 120 100 L 140 120 L 120 140" stroke="#4caf50" stroke-width="3" fill="none"/>
+  <path d="M 280 100 L 260 120 L 280 140" stroke="#4caf50" stroke-width="3" fill="none"/>
+  
+  
+  <text x="200" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c5530">Stuhl-Wartung</text>
+  
+  
+  <text x="50" y="160" font-family="Arial, sans-serif" font-size="10" fill="#666">✓ Räder</text>
+  <text x="320" y="160" font-family="Arial, sans-serif" font-size="10" fill="#666">✓ Ölung</text>
+  
+  
+  <circle cx="200" cy="100" r="20" fill="rgba(0,0,0,0.7)"/>
+  <polygon points="193,90 193,110 210,100" fill="white"/>
+</svg>

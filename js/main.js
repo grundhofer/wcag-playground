@@ -1,21 +1,21 @@
-// GreenLeaf Office Solutions - Main JavaScript
 
-// Global utilities and state management
+
+
 const GreenLeaf = {
-    // Shopping cart state
+    
     cart: JSON.parse(localStorage.getItem('greenleaf-cart')) || [],
     
-    // User preferences
+    
     preferences: JSON.parse(localStorage.getItem('greenleaf-preferences')) || {
         language: 'de',
         currency: 'EUR',
         reducedMotion: false
     },
     
-    // Current language
+    
     currentLanguage: 'de',
     
-    // Initialize the application
+    
     init() {
         this.setupEventListeners();
         this.initializeComponents();
@@ -23,23 +23,23 @@ const GreenLeaf = {
         this.initLanguage();
     },
     
-    // Set up global event listeners
+    
     setupEventListeners() {
-        // Handle form submissions
+        
         document.addEventListener('submit', this.handleFormSubmit.bind(this));
         
-        // Handle clicks
+        
         document.addEventListener('click', this.handleClick.bind(this));
         
-        // Handle keyboard navigation
+        
         document.addEventListener('keydown', this.handleKeydown.bind(this));
         
-        // Handle focus management
+        
         document.addEventListener('focusin', this.handleFocusIn.bind(this));
         document.addEventListener('focusout', this.handleFocusOut.bind(this));
     },
     
-    // Initialize components
+    
     initializeComponents() {
         this.initDropdowns();
         this.initModals();
@@ -49,73 +49,86 @@ const GreenLeaf = {
         this.initTooltips();
     },
     
-    // Handle form submissions
+    
     handleFormSubmit(event) {
         const form = event.target;
         
-        // Newsletter signup
+        
         if (form.classList.contains('newsletter-form')) {
             event.preventDefault();
             this.handleNewsletterSignup(form);
         }
         
-        // Contact form
+        
         if (form.classList.contains('contact-form')) {
             event.preventDefault();
             this.handleContactSubmission(form);
         }
         
-        // Search form
+        
         if (form.classList.contains('search-form')) {
             event.preventDefault();
             this.handleSearch(form);
         }
     },
     
-    // Handle clicks
+    
     handleClick(event) {
         const target = event.target;
         
-        // Add to cart buttons
+        
+        if (target.tagName === 'A' && this.isDemoLink(target.href)) {
+            event.preventDefault();
+            this.showDemoDialog();
+            return;
+        }
+        
+        
         if (target.classList.contains('add-to-cart')) {
             event.preventDefault();
             this.addToCart(target.dataset.productId);
         }
         
-        // Quantity selectors
+        
         if (target.classList.contains('qty-btn')) {
             event.preventDefault();
             this.handleQuantityChange(target);
         }
         
-        // Filter buttons
+        
         if (target.classList.contains('filter-btn')) {
             event.preventDefault();
             this.handleFilterChange(target);
         }
         
-        // Mobile menu toggle
+        
+        if (target.id === 'apply-filters') {
+            event.preventDefault();
+            this.applyProductFilters();
+        }
+        
+        
         if (target.classList.contains('mobile-menu-toggle')) {
             event.preventDefault();
             this.toggleMobileMenu();
         }
         
-        // Language switcher
+        
         if (target.classList.contains('language-btn')) {
             event.preventDefault();
             this.switchLanguage(target.dataset.lang);
         }
     },
     
-    // Handle keyboard navigation
+    
     handleKeydown(event) {
-        // Escape key to close modals/overlays
+        
         if (event.key === 'Escape') {
             this.closeActiveModal();
             this.closeActiveDropdown();
         }
         
-        // Arrow key navigation for carousels
+        
         if (event.target.closest('.carousel')) {
             if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
                 this.handleCarouselNavigation(event);
@@ -123,18 +136,18 @@ const GreenLeaf = {
         }
     },
     
-    // Handle focus events
+    
     handleFocusIn(event) {
-        // Add focus class for styling
+        
         event.target.classList.add('focused');
     },
     
     handleFocusOut(event) {
-        // Remove focus class
+        
         event.target.classList.remove('focused');
     },
     
-    // Shopping cart functionality
+    
     addToCart(productId, quantity = 1) {
         const existingItem = this.cart.find(item => item.id === productId);
         
@@ -174,35 +187,35 @@ const GreenLeaf = {
         localStorage.setItem('greenleaf-cart', JSON.stringify(this.cart));
     },
     
-    // Newsletter signup
+    
     handleNewsletterSignup(form) {
         const email = form.querySelector('input[type="email"]').value;
         const formData = new FormData(form);
         
-        // Simulate API call
+        
         setTimeout(() => {
             this.showNotification('Vielen Dank für Ihr Abonnement!', 'success');
             form.reset();
         }, 1000);
     },
     
-    // Contact form submission
+    
     handleContactSubmission(form) {
         const formData = new FormData(form);
         
-        // Basic validation
+        
         if (!this.validateForm(form)) {
             this.showNotification('Bitte füllen Sie alle Pflichtfelder aus', 'error');
             return;
         }
         
-        // Show loading state
+        
         const submitBtn = form.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Wird gesendet...';
         submitBtn.disabled = true;
         
-        // Simulate API call
+        
         setTimeout(() => {
             this.showNotification('Nachricht erfolgreich gesendet!', 'success');
             form.reset();
@@ -211,7 +224,7 @@ const GreenLeaf = {
         }, 2000);
     },
     
-    // Form validation
+    
     validateForm(form) {
         const requiredFields = form.querySelectorAll('[required]');
         let isValid = true;
@@ -228,16 +241,16 @@ const GreenLeaf = {
         return isValid;
     },
     
-    // Search functionality
+    
     handleSearch(form) {
         const query = form.querySelector('input[name="q"]').value;
         if (query.trim()) {
-            // Redirect to search results
+            
             window.location.href = `/search.html?q=${encodeURIComponent(query)}`;
         }
     },
     
-    // Notification system
+    
     showNotification(message, type = 'info') {
         const notification = document.createElement('div');
         notification.className = `notification notification-${type}`;
@@ -246,7 +259,7 @@ const GreenLeaf = {
             <button class="notification-close" aria-label="Benachrichtigung schließen">&times;</button>
         `;
         
-        // Add to container
+        
         let container = document.querySelector('.notification-container');
         if (!container) {
             container = document.createElement('div');
@@ -256,20 +269,20 @@ const GreenLeaf = {
         
         container.appendChild(notification);
         
-        // Auto remove after 5 seconds
+        
         setTimeout(() => {
             if (notification.parentNode) {
                 notification.remove();
             }
         }, 5000);
         
-        // Handle close button
+        
         notification.querySelector('.notification-close').addEventListener('click', () => {
             notification.remove();
         });
     },
     
-    // Modal functionality
+    
     initModals() {
         const modalTriggers = document.querySelectorAll('[data-modal]');
         modalTriggers.forEach(trigger => {
@@ -280,7 +293,7 @@ const GreenLeaf = {
             });
         });
         
-        // Close modals on backdrop click
+        
         document.addEventListener('click', (e) => {
             if (e.target.classList.contains('modal-backdrop')) {
                 this.closeActiveModal();
@@ -294,7 +307,7 @@ const GreenLeaf = {
             modal.style.display = 'block';
             modal.setAttribute('aria-hidden', 'false');
             
-            // Focus first focusable element
+            
             const focusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
             if (focusable) {
                 focusable.focus();
@@ -310,7 +323,7 @@ const GreenLeaf = {
         }
     },
     
-    // Dropdown functionality
+    
     initDropdowns() {
         const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
         dropdownToggles.forEach(toggle => {
@@ -321,7 +334,7 @@ const GreenLeaf = {
             });
         });
         
-        // Close dropdowns when clicking outside
+        
         document.addEventListener('click', () => {
             this.closeAllDropdowns();
         });
@@ -354,7 +367,7 @@ const GreenLeaf = {
         this.closeAllDropdowns();
     },
     
-    // Carousel functionality
+    
     initCarousels() {
         const carousels = document.querySelectorAll('.carousel');
         carousels.forEach(carousel => {
@@ -439,16 +452,16 @@ const GreenLeaf = {
             });
         });
         
-        // Initialize first slide
+        
         showSlide(0);
         
-        // Start autoplay if enabled
+        
         if (isPlaying) {
             startAutoplay();
         }
     },
     
-    // Tab functionality
+    
     initTabs() {
         const tabContainers = document.querySelectorAll('.tab-container');
         tabContainers.forEach(container => {
@@ -457,11 +470,11 @@ const GreenLeaf = {
             
             tabs.forEach((tab, index) => {
                 tab.addEventListener('click', () => {
-                    // Update tabs
+                    
                     tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
                     tab.setAttribute('aria-selected', 'true');
                     
-                    // Update panels
+                    
                     panels.forEach(panel => panel.style.display = 'none');
                     if (panels[index]) {
                         panels[index].style.display = 'block';
@@ -471,7 +484,7 @@ const GreenLeaf = {
         });
     },
     
-    // Accordion functionality
+    
     initAccordions() {
         const accordionButtons = document.querySelectorAll('.accordion-button');
         accordionButtons.forEach(button => {
@@ -487,7 +500,7 @@ const GreenLeaf = {
         });
     },
     
-    // Tooltip functionality
+    
     initTooltips() {
         const tooltipTriggers = document.querySelectorAll('[data-tooltip]');
         tooltipTriggers.forEach(trigger => {
@@ -518,7 +531,7 @@ const GreenLeaf = {
         
         document.body.appendChild(tooltip);
         
-        // Position tooltip
+        
         const rect = trigger.getBoundingClientRect();
         tooltip.style.left = rect.left + 'px';
         tooltip.style.top = (rect.top - tooltip.offsetHeight - 5) + 'px';
@@ -537,9 +550,132 @@ const GreenLeaf = {
         }
     },
     
-    // Language functionality
+    
+    applyProductFilters() {
+        const category = document.getElementById('category-filter')?.value || 'all';
+        const priceRange = document.getElementById('price-range')?.value || 'all';
+        const sortBy = document.getElementById('sort-by')?.value || 'featured';
+        
+        
+        let filterMessage = 'Filter angewendet: ';
+        const filters = [];
+        
+        if (category !== 'all') {
+            const categoryNames = {
+                'furniture': 'Möbel',
+                'supplies': 'Material', 
+                'technology': 'Technologie'
+            };
+            filters.push(`Kategorie: ${categoryNames[category] || category}`);
+        }
+        
+        if (priceRange !== 'all') {
+            const priceNames = {
+                '0-50': 'Unter €50',
+                '50-150': '€50 - €150',
+                '150-300': '€150 - €300',
+                '300+': 'Über €300'
+            };
+            filters.push(`Preis: ${priceNames[priceRange] || priceRange}`);
+        }
+        
+        if (sortBy !== 'featured') {
+            const sortNames = {
+                'price-low': 'Preis: Niedrig zu Hoch',
+                'price-high': 'Preis: Hoch zu Niedrig',
+                'newest': 'Neueste zuerst'
+            };
+            filters.push(`Sortierung: ${sortNames[sortBy] || sortBy}`);
+        }
+        
+        if (filters.length === 0) {
+            filterMessage += 'Alle Filter zurückgesetzt';
+        } else {
+            filterMessage += filters.join(', ');
+        }
+        
+        this.showNotification(filterMessage, 'info');
+        
+        
+        
+    },
+    
+    
+    isDemoLink(href) {
+        const demoPatterns = [
+            '/products/',
+            '/services/',
+            '/resources/',
+            '/account/',
+            'products/',
+            'services/',
+            'resources/',
+            'account/',
+            'privacy.html',
+            'terms.html',
+            'accessibility.html'
+        ];
+        
+        return demoPatterns.some(pattern => href.includes(pattern));
+    },
+    
+    
+    showDemoDialog() {
+        const dialog = document.createElement('div');
+        dialog.className = 'demo-dialog';
+        dialog.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        `;
+        
+        const content = document.createElement('div');
+        content.style.cssText = `
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 500px;
+            margin: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        `;
+        
+        content.innerHTML = `
+            <h3 style="margin-top: 0; color: var(--primary-green);">🧪 Demo-Seite</h3>
+            <p>Diese Seite existiert nur zu Testzwecken und ist nicht implementiert.</p>
+            <p>Dies ist ein WCAG 2.2 Testing Playground zur Demonstration von Barrierefreiheitsproblemen.</p>
+            <button class="btn btn-primary" onclick="this.closest('.demo-dialog').remove()" style="margin-top: 1rem;">Verstanden</button>
+        `;
+        
+        dialog.appendChild(content);
+        document.body.appendChild(dialog);
+        
+        
+        dialog.addEventListener('click', (e) => {
+            if (e.target === dialog) {
+                dialog.remove();
+            }
+        });
+        
+        
+        const handleEscape = (e) => {
+            if (e.key === 'Escape') {
+                dialog.remove();
+                document.removeEventListener('keydown', handleEscape);
+            }
+        };
+        document.addEventListener('keydown', handleEscape);
+    },
+    
+    
     initLanguage() {
-        // Load saved language preference
+        
         this.currentLanguage = this.preferences.language || 'en';
         this.updateLanguageDisplay();
         this.updateLanguageButtons();
@@ -564,7 +700,7 @@ const GreenLeaf = {
             }
         });
         
-        // Update placeholders
+        
         const placeholderElements = document.querySelectorAll('[data-en-placeholder], [data-de-placeholder]');
         placeholderElements.forEach(element => {
             const placeholder = element.getAttribute(`data-${this.currentLanguage}-placeholder`);
@@ -573,7 +709,7 @@ const GreenLeaf = {
             }
         });
         
-        // Update document language
+        
         document.documentElement.lang = this.currentLanguage;
     },
     
@@ -585,10 +721,10 @@ const GreenLeaf = {
     }
 };
 
-// Initialize when DOM is loaded
+
 document.addEventListener('DOMContentLoaded', () => {
     GreenLeaf.init();
 });
 
-// Export for global access
+
 window.GreenLeaf = GreenLeaf;

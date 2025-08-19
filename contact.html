@@ -11,12 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Skip Navigation -->
+    
     <a href="#main-content" class="skip-nav">Zum Hauptinhalt springen</a>
     
-    <!-- Header -->
+    
     <header class="header" role="banner">
-        <!-- Top Bar -->
+        
         <div class="header-top">
             <div class="container">
                 <div class="row">
@@ -30,17 +30,17 @@
             </div>
         </div>
         
-        <!-- Main Header -->
+        
         <div class="header-main">
             <div class="container">
                 <nav class="navbar" role="navigation" aria-label="Main navigation">
-                    <!-- Logo -->
+                    
                     <div class="logo">
                         <img src="images/logo.svg" alt="GreenLeaf Office Solutions" width="40" height="40">
                         <span>GreenLeaf</span>
                     </div>
                     
-                    <!-- Navigation Menu -->
+                    
                     <ul class="nav-menu" role="menubar">
                         <li class="nav-item" role="none">
                             <a href="index.html" class="nav-link" role="menuitem">Startseite</a>
@@ -62,9 +62,9 @@
                         </li>
                     </ul>
                     
-                    <!-- Header Actions -->
+                    
                     <div class="header-actions">
-                        <!-- Search -->
+                        
                         <form class="search-form" role="search" aria-label="Site search">
                             <input type="search" name="q" placeholder="Search..." class="form-control" aria-label="Search">
                             <button type="submit" class="btn btn-primary" aria-label="Submit search">
@@ -72,13 +72,13 @@
                             </button>
                         </form>
                         
-                        <!-- Cart -->
+                        
                         <a href="cart.html" class="btn btn-secondary" aria-label="Shopping cart">
                             🛒 Cart
                             <span class="cart-badge" aria-label="Items in cart">0</span>
                         </a>
                         
-                        <!-- Account -->
+                        
                         <a href="account/login.html" class="btn btn-secondary">Login</a>
                     </div>
                 </nav>
@@ -86,9 +86,9 @@
         </div>
     </header>
     
-    <!-- Main Content -->
+    
     <main id="main-content" role="main">
-        <!-- Page Header -->
+        
         <section class="page-header py-5" style="background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%); color: white;">
             <div class="container">
                 <h1 style="color: white;" data-en="Contact Us" data-de="Kontaktieren Sie uns">Kontaktieren Sie uns</h1>
@@ -96,7 +96,7 @@
             </div>
         </section>
         
-        <!-- Contact Information -->
+        
         <section class="contact-info py-5">
             <div class="container">
                 <div class="row">
@@ -106,7 +106,7 @@
                                 <div style="font-size: 2rem; color: var(--primary-green);">📍</div>
                                 <h3 data-en="Visit Us" data-de="Besuchen Sie uns">Visit Us</h3>
                                 <p>Unter den Linden 21<br>10117 Berlin, Germany</p>
-                                <!-- WCAG Issue: Link that opens new window without warning -->
+                                
                                 <a href="https://maps.google.com" target="_blank" class="btn btn-primary" data-en="Get Directions" data-de="Wegbeschreibung">Get Directions</a>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
             </div>
         </section>
         
-        <!-- Contact Form -->
+        
         <section class="contact-form-section py-5" style="background: var(--light-gray);">
             <div class="container">
                 <h2 class="text-center mb-5" data-en="Send Us a Message" data-de="Senden Sie uns eine Nachricht">Send Us a Message</h2>
@@ -146,14 +146,14 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <!-- WCAG Issue: Required field not indicated -->
+                                            
                                             <label for="first-name" class="form-label" data-en="First Name" data-de="Vorname">First Name</label>
                                             <input type="text" id="first-name" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <!-- WCAG Issue: Placeholder as only label -->
+                                            
                                             <input type="text" class="form-control" placeholder="Last Name" required>
                                         </div>
                                     </div>
@@ -164,7 +164,7 @@
                                         <div class="form-group">
                                             <label for="email" class="form-label" data-en="Email Address *" data-de="E-Mail-Adresse *">Email Address *</label>
                                             <input type="email" id="email" class="form-control" required>
-                                            <!-- WCAG Issue: Error message with poor contrast -->
+                                            
                                             <small style="color: #ffcccc;">Please enter a valid email</small>
                                         </div>
                                     </div>
@@ -182,7 +182,7 @@
                                 </div>
                                 
                                 <div class="form-group">
-                                    <!-- WCAG Issue: Select without proper label association -->
+                                    
                                     <label class="form-label" data-en="Inquiry Type *" data-de="Anfrageart *">Inquiry Type *</label>
                                     <select class="form-control" required>
                                         <option value="">Select an option</option>
@@ -197,11 +197,11 @@
                                 <div class="form-group">
                                     <label for="message" class="form-label" data-en="Message *" data-de="Nachricht *">Message *</label>
                                     <textarea id="message" class="form-control" rows="5" required></textarea>
-                                    <!-- WCAG Issue: Character counter not announced to screen readers -->
+                                    
                                     <small style="color: #999;">0/500 characters</small>
                                 </div>
                                 
-                                <!-- WCAG Issue: Checkbox group without fieldset/legend -->
+                                
                                 <div class="form-group">
                                     <label class="form-label">How did you hear about us?</label>
                                     <div>
@@ -211,38 +211,38 @@
                                         </label>
                                         <label style="display: block; margin-bottom: 0.5rem;">
                                             <input type="checkbox" style="margin-right: 0.5rem;">
-                                            Social Media
+                                            Soziale Medien
                                         </label>
                                         <label style="display: block; margin-bottom: 0.5rem;">
                                             <input type="checkbox" style="margin-right: 0.5rem;">
-                                            Referral
+                                            Empfehlung
                                         </label>
                                         <label style="display: block; margin-bottom: 0.5rem;">
                                             <input type="checkbox" style="margin-right: 0.5rem;">
-                                            Trade Show
+                                            Messe
                                         </label>
                                     </div>
                                 </div>
                                 
-                                <!-- WCAG Issue: Time limit without warning -->
+                                
                                 <div class="form-group" style="background: #fff3cd; padding: 1rem; border-radius: 4px;">
-                                    <p style="margin: 0; color: #856404;">⏱️ This form will timeout after 10 minutes of inactivity</p>
+                                    <p style="margin: 0; color: #856404;">⏱️ Dieses Formular läuft nach 10 Minuten Inaktivität ab</p>
                                 </div>
                                 
                                 <div class="form-group">
-                                    <!-- WCAG Issue: Checkbox without proper label -->
+                                    
                                     <label>
                                         <input type="checkbox" required style="margin-right: 0.5rem;">
-                                        I agree to the <a href="privacy.html">privacy policy</a> and <a href="terms.html">terms of service</a> *
+                                        <span data-en="I agree to the" data-de="Ich stimme der">Ich stimme der</span> <a href="privacy.html" data-en="privacy policy" data-de="Datenschutzrichtlinie">Datenschutzrichtlinie</a> <span data-en="and" data-de="und den">und den</span> <a href="terms.html" data-en="terms of service" data-de="Nutzungsbedingungen">Nutzungsbedingungen</a> <span data-en="to" data-de="zu">zu</span> *
                                     </label>
                                 </div>
                                 
-                                <!-- WCAG Issue: CAPTCHA without alternative -->
+                                
                                 <div class="form-group" style="background: white; padding: 1rem; border: 1px solid #ddd; border-radius: 4px;">
-                                    <label class="form-label">Security Check</label>
-                                    <p>Type the characters you see in the image:</p>
-                                    <img src="images/test.jpg" alt="CAPTCHA image" style="margin-bottom: 1rem;">
-                                    <input type="text" class="form-control" required placeholder="Enter CAPTCHA">
+                                    <label class="form-label" data-en="Security Check" data-de="Sicherheitsprüfung">Sicherheitsprüfung</label>
+                                    <p data-en="Type the characters you see in the image:" data-de="Geben Sie die Zeichen ein, die Sie im Bild sehen:">Geben Sie die Zeichen ein, die Sie im Bild sehen:</p>
+                                    <img src="images/captcha.svg" alt="CAPTCHA image" style="margin-bottom: 1rem;">
+                                    <input type="text" class="form-control" required placeholder="CAPTCHA eingeben" data-en-placeholder="Enter CAPTCHA" data-de-placeholder="CAPTCHA eingeben">
                                 </div>
                                 
                                 <div class="row">
@@ -250,13 +250,13 @@
                                         <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" data-en="Send Message" data-de="Nachricht senden">Send Message</button>
                                     </div>
                                     <div class="col-6">
-                                        <!-- WCAG Issue: Reset button that could cause data loss -->
+                                        
                                         <button type="reset" class="btn btn-secondary btn-lg" style="width: 100%;" data-en="Clear Form" data-de="Formular leeren">Clear Form</button>
                                     </div>
                                 </div>
                                 
-                                <!-- Success/Error messages (hidden by default) -->
-                                <!-- WCAG Issue: Status message not announced -->
+                                
+                                
                                 <div class="alert" style="display: none; margin-top: 1rem; padding: 1rem; background: #d4edda; color: #155724; border-radius: 4px;">
                                     ✓ Your message has been sent successfully!
                                 </div>
@@ -267,14 +267,14 @@
             </div>
         </section>
         
-        <!-- Live Chat Widget -->
-        <!-- WCAG Issue: Auto-updating content without pause control -->
+        
+        
         <div style="position: fixed; bottom: 20px; right: 20px; background: var(--primary-green); color: white; padding: 1rem; border-radius: 8px; box-shadow: var(--shadow-lg); z-index: 1000;">
             <p style="margin: 0;">💬 Live Chat Available</p>
             <small>Agent is typing<span class="typing-dots">...</span></small>
         </div>
         
-        <!-- Office Locations -->
+        
         <section class="locations py-5">
             <div class="container">
                 <h2 class="text-center mb-5" data-en="Our Office Locations" data-de="Unsere Bürostandorte">Our Office Locations</h2>
@@ -284,7 +284,7 @@
                             <div class="card-body">
                                 <h3 data-en="Berlin HQ" data-de="Berlin Hauptsitz">Berlin HQ</h3>
                                 <p>Unter den Linden 21<br>10117 Berlin</p>
-                                <!-- WCAG Issue: Phone number not marked up properly -->
+                                
                                 <p>+49 30 123 456 789</p>
                             </div>
                         </div>
@@ -321,34 +321,34 @@
         </section>
     </main>
     
-    <!-- Footer -->
+    
     <footer class="footer py-5" style="background: var(--dark-gray); color: white;" role="contentinfo">
         <div class="container">
             <div class="row">
                 <div class="col-3">
                     <h4 style="color: white;">GreenLeaf</h4>
-                    <p>Sustainable office solutions for modern businesses committed to environmental responsibility.</p>
+                    <p>Nachhaltige Bürolösungen für moderne Unternehmen mit Umweltverantwortung.</p>
                 </div>
                 <div class="col-3">
-                    <h4 style="color: white;">Products</h4>
+                    <h4 style="color: white;">Produkte</h4>
                     <ul style="list-style: none; padding: 0;">
-                        <li><a href="products/furniture.html">Office Furniture</a></li>
-                        <li><a href="products/supplies.html">Office Supplies</a></li>
-                        <li><a href="products/technology.html">Technology</a></li>
+                        <li><a href="products/furniture.html">Büromöbel</a></li>
+                        <li><a href="products/supplies.html">Büromaterial</a></li>
+                        <li><a href="products/technology.html">Technologie</a></li>
                     </ul>
                 </div>
                 <div class="col-3">
-                    <h4 style="color: white;">Services</h4>
+                    <h4 style="color: white;">Dienstleistungen</h4>
                     <ul style="list-style: none; padding: 0;">
-                        <li><a href="services/workspace-consulting.html">Workspace Consulting</a></li>
-                        <li><a href="services/sustainability-audit.html">Sustainability Audit</a></li>
-                        <li><a href="services/training.html">Team Training</a></li>
+                        <li><a href="services/workspace-consulting.html">Arbeitsplatz-Beratung</a></li>
+                        <li><a href="services/sustainability-audit.html">Nachhaltigkeits-Audit</a></li>
+                        <li><a href="services/training.html">Team-Schulung</a></li>
                     </ul>
                 </div>
                 <div class="col-3">
                     <h4 style="color: white;">Support</h4>
                     <ul style="list-style: none; padding: 0;">
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html">Kontaktieren Sie uns</a></li>
                         <li><a href="resources/downloads.html">Downloads</a></li>
                         <li><a href="resources/blog.html">Blog</a></li>
                     </ul>
@@ -358,12 +358,12 @@
             <div class="footer-bottom mt-4 pt-4" style="border-top: 1px solid #495057;">
                 <div class="row">
                     <div class="col-6">
-                        <p>&copy; 2024 GreenLeaf Office Solutions. All rights reserved.</p>
+                        <p>&copy; 2024 GreenLeaf Office Solutions. Alle Rechte vorbehalten.</p>
                     </div>
                     <div class="col-6 text-right">
-                        <a href="privacy.html">Privacy Policy</a> |
-                        <a href="terms.html">Terms of Service</a> |
-                        <a href="accessibility.html">Accessibility</a>
+                        <a href="privacy.html">Datenschutz</a> |
+                        <a href="terms.html">Nutzungsbedingungen</a> |
+                        <a href="accessibility.html">Barrierefreiheit</a>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,71 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  
+  <rect width="400" height="300" fill="#4caf50"/>
+  
+  
+  
+  <rect x="80" y="120" width="60" height="80" fill="white" opacity="0.95" rx="3"/>
+  <rect x="85" y="115" width="60" height="80" fill="#f5f5f5" opacity="0.9" rx="3"/>
+  <rect x="90" y="110" width="60" height="80" fill="white" opacity="0.95" rx="3"/>
+  
+  
+  <circle cx="95" cy="125" r="2" fill="#666"/>
+  <circle cx="95" cy="135" r="2" fill="#666"/>
+  <circle cx="95" cy="145" r="2" fill="#666"/>
+  <circle cx="95" cy="155" r="2" fill="#666"/>
+  <circle cx="95" cy="165" r="2" fill="#666"/>
+  <circle cx="95" cy="175" r="2" fill="#666"/>
+  
+  
+  <rect x="180" y="100" width="8" height="60" fill="#2196f3" rx="4"/>
+  <rect x="195" y="100" width="8" height="60" fill="#ff9800" rx="4"/>
+  <rect x="210" y="100" width="8" height="60" fill="#4caf50" rx="4"/>
+  <rect x="225" y="100" width="8" height="60" fill="#e91e63" rx="4"/>
+  
+  
+  <rect x="181" y="95" width="6" height="8" fill="#1976d2" rx="3"/>
+  <rect x="196" y="95" width="6" height="8" fill="#f57c00" rx="3"/>
+  <rect x="211" y="95" width="6" height="8" fill="#388e3c" rx="3"/>
+  <rect x="226" y="95" width="6" height="8" fill="#c2185b" rx="3"/>
+  
+  
+  <rect x="280" y="110" width="40" height="40" fill="#ffeb3b" opacity="0.9" rx="2"/>
+  <rect x="285" y="115" width="30" height="30" fill="#ffc107" opacity="0.9" rx="2"/>
+  <rect x="290" y="120" width="20" height="20" fill="#ff9800" opacity="0.9" rx="2"/>
+  
+  
+  <ellipse cx="160" cy="200" rx="8" ry="4" fill="#9e9e9e"/>
+  <ellipse cx="175" cy="205" rx="8" ry="4" fill="#9e9e9e"/>
+  <ellipse cx="190" cy="200" rx="8" ry="4" fill="#9e9e9e"/>
+  
+  
+  <rect x="260" y="180" width="80" height="8" fill="white" opacity="0.9" rx="1"/>
+  <line x1="265" y1="180" x2="265" y2="188" stroke="#333" stroke-width="1"/>
+  <line x1="275" y1="180" x2="275" y2="188" stroke="#333" stroke-width="1"/>
+  <line x1="285" y1="180" x2="285" y2="188" stroke="#333" stroke-width="1"/>
+  <line x1="295" y1="180" x2="295" y2="188" stroke="#333" stroke-width="1"/>
+  <line x1="305" y1="180" x2="305" y2="188" stroke="#333" stroke-width="1"/>
+  <line x1="315" y1="180" x2="315" y2="188" stroke="#333" stroke-width="1"/>
+  <line x1="325" y1="180" x2="325" y2="188" stroke="#333" stroke-width="1"/>
+  <line x1="335" y1="180" x2="335" y2="188" stroke="#333" stroke-width="1"/>
+  
+  
+  <rect x="120" y="220" width="16" height="12" fill="#e91e63" rx="2"/>
+  <rect x="145" y="220" width="16" height="12" fill="#9c27b0" rx="2"/>
+  
+  
+  <ellipse cx="300" cy="220" rx="25" ry="15" fill="white" opacity="0.9"/>
+  <ellipse cx="300" cy="220" rx="15" ry="8" fill="#666"/>
+  <rect x="290" y="210" width="20" height="5" fill="#ffc107" rx="2"/>
+  
+  
+  <circle cx="60" cy="60" r="20" fill="white" opacity="0.9"/>
+  <text x="60" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#4caf50">♻</text>
+  
+  <circle cx="340" cy="60" r="20" fill="white" opacity="0.9"/>
+  <text x="340" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#4caf50">🌿</text>
+  
+  
+  <text x="200" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">Büromaterial</text>
+  <text x="200" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white" opacity="0.9">Umweltfreundliche Materialien</text>
+</svg>

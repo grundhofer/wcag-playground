@@ -11,12 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Skip Navigation -->
+    
     <a href="#main-content" class="skip-nav">Zum Hauptinhalt springen</a>
     
-    <!-- Header -->
+    
     <header class="header" role="banner">
-        <!-- Top Bar -->
+        
         <div class="header-top">
             <div class="container">
                 <div class="row">
@@ -30,17 +30,17 @@
             </div>
         </div>
         
-        <!-- Main Header -->
+        
         <div class="header-main">
             <div class="container">
                 <nav class="navbar" role="navigation" aria-label="Main navigation">
-                    <!-- Logo -->
+                    
                     <div class="logo">
                         <img src="images/logo.svg" alt="GreenLeaf Office Solutions" width="40" height="40">
                         <span>GreenLeaf</span>
                     </div>
                     
-                    <!-- Navigation Menu -->
+                    
                     <ul class="nav-menu" role="menubar">
                         <li class="nav-item" role="none">
                             <a href="index.html" class="nav-link" role="menuitem">Startseite</a>
@@ -62,9 +62,9 @@
                         </li>
                     </ul>
                     
-                    <!-- Header Actions -->
+                    
                     <div class="header-actions">
-                        <!-- Search -->
+                        
                         <form class="search-form" role="search" aria-label="Site search">
                             <input type="search" name="q" placeholder="Ressourcen suchen..." class="form-control" aria-label="Ressourcen suchen">
                             <button type="submit" class="btn btn-primary" aria-label="Suche absenden">
@@ -72,13 +72,13 @@
                             </button>
                         </form>
                         
-                        <!-- Cart -->
+                        
                         <a href="cart.html" class="btn btn-secondary" aria-label="Warenkorb">
                             🛒 Warenkorb
                             <span class="cart-badge" aria-label="Artikel im Warenkorb">0</span>
                         </a>
                         
-                        <!-- Account -->
+                        
                         <a href="account/login.html" class="btn btn-secondary">Anmelden</a>
                     </div>
                 </nav>
@@ -86,9 +86,9 @@
         </div>
     </header>
     
-    <!-- Main Content -->
+    
     <main id="main-content" role="main">
-        <!-- Page Header -->
+        
         <section class="page-header py-5" style="background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%); color: white;">
             <div class="container">
                 <h1 style="color: white;" data-en="Resources & Guides" data-de="Ressourcen & Leitfäden">Ressourcen & Leitfäden</h1>
@@ -96,20 +96,20 @@
             </div>
         </section>
         
-        <!-- Resources Grid -->
+        
         <section class="resources py-5">
             <div class="container">
-                <!-- Downloads Section -->
+                
                 <h2 class="mb-4" data-en="Free Downloads" data-de="Kostenlose Downloads">Kostenlose Downloads</h2>
                 <div class="row mb-5">
                     <div class="col-4">
                         <div class="card">
                             <div class="card-body">
-                                <!-- WCAG Issue: Icon without text alternative -->
+                                
                                 <div style="font-size: 3rem; text-align: center; color: var(--primary-green);">📄</div>
                                 <h3 class="text-center">Nachhaltigkeits-Checkliste</h3>
                                 <p class="text-center">Kompletter Büro-Nachhaltigkeitsbewertungsleitfaden</p>
-                                <!-- WCAG Issue: Download link without file type/size info -->
+                                
                                 <div class="text-center">
                                     <a href="resources/downloads.html" class="btn btn-primary">Herunterladen</a>
                                 </div>
@@ -142,7 +142,7 @@
                     </div>
                 </div>
                 
-                <!-- Blog Articles -->
+                
                 <h2 class="mb-4" data-en="Latest Articles" data-de="Neueste Artikel">Neueste Artikel</h2>
                 <div class="row mb-5">
                     <div class="col-12">
@@ -150,14 +150,14 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-9">
-                                        <!-- WCAG Issue: Time without datetime attribute -->
+                                        
                                         <time style="color: #999; font-size: 0.9rem;">15. Januar 2024</time>
                                         <h3 class="mt-2">10 Wege zur Reduzierung von Büroabfall in 2024</h3>
                                         <p>Entdecken Sie praktische Strategien zur Minimierung von Abfall und Maximierung der Effizienz an Ihrem Arbeitsplatz...</p>
                                         <a href="resources/blog.html" class="btn btn-primary">Weiterlesen</a>
                                     </div>
                                     <div class="col-3">
-                                        <!-- WCAG Issue: Background image with text overlay (potential contrast issue) -->
+                                        
                                         <div style="height: 150px; background: url('images/hero-bg.svg') center/cover; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
                                             <span style="color: white; font-weight: bold; background: rgba(0,0,0,0.3); padding: 0.5rem;">Featured</span>
                                         </div>
@@ -176,7 +176,7 @@
                                         <a href="resources/blog.html" class="btn btn-primary">Weiterlesen</a>
                                     </div>
                                     <div class="col-3">
-                                        <img src="images/project2.svg" alt="Ergonomic workspace" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;">
+                                        <img src="images/ergonomic-workspace.svg" alt="Ergonomic workspace" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;">
                                     </div>
                                 </div>
                             </div>
@@ -200,27 +200,23 @@
                     </div>
                 </div>
                 
-                <!-- Video Tutorials -->
+                
                 <h2 class="mb-4" data-en="Video Tutorials" data-de="Video-Tutorials">Video-Tutorials</h2>
                 <div class="row mb-5">
                     <div class="col-4">
                         <div class="card">
-                            <!-- WCAG Issue: Auto-playing video without controls -->
-                            <video style="width: 100%; height: 200px; object-fit: cover;" autoplay muted loop>
-                                <source src="media/tutorial1.mp4" type="video/mp4">
-                                Ihr Browser unterstützt kein Video.
-                            </video>
+                            <img src="images/eco-desk-tutorial.svg" alt="ÖkoSchreibtisch tutorial thumbnail" class="card-img">
                             <div class="card-body">
                                 <h3>Einrichtung Ihres ÖkoSchreibtisches</h3>
                                 <p>Schritt-für-Schritt-Montageanleitung für unseren Bambus-Stehschreibtisch</p>
-                                <!-- WCAG Issue: Time duration not clearly indicated -->
+                                
                                 <small style="color: #999;">15 Minuten</small>
                             </div>
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="card">
-                            <img src="images/service-web.svg" alt="Maintenance tutorial thumbnail" class="card-img">
+                            <img src="images/chair-maintenance-tutorial.svg" alt="Maintenance tutorial thumbnail" class="card-img">
                             <div class="card-body">
                                 <h3>Stuhl-Wartungstipps</h3>
                                 <p>Halten Sie Ihren ergonomischen Stuhl in perfektem Zustand</p>
@@ -230,7 +226,7 @@
                     </div>
                     <div class="col-4">
                         <div class="card">
-                            <img src="images/team1.svg" alt="Organization tutorial thumbnail" class="card-img">
+                            <img src="images/workspace-organization-tutorial.svg" alt="Organization tutorial thumbnail" class="card-img">
                             <div class="card-body">
                                 <h3>Arbeitsplatz-Organisation</h3>
                                 <p>Maximieren Sie die Produktivität mit ordentlicher Schreibtischorganisation</p>
@@ -240,10 +236,10 @@
                     </div>
                 </div>
                 
-                <!-- FAQ Section -->
+                
                 <h2 class="mb-4" data-en="Frequently Asked Questions" data-de="Häufig gestellte Fragen">Häufig gestellte Fragen</h2>
                 <div class="faq-section">
-                    <!-- WCAG Issue: Expandable content without proper ARIA -->
+                    
                     <div class="card mb-2">
                         <div class="card-header" style="cursor: pointer; background: var(--light-gray);" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'">
                             <h3 style="margin: 0; font-size: 1.1rem;">Was macht Ihre Produkte umweltfreundlich?</h3>
@@ -272,14 +268,14 @@
                     </div>
                 </div>
                 
-                <!-- Newsletter CTA -->
+                
                 <div class="card mt-5" style="background: var(--light-green);">
                     <div class="card-body text-center py-5">
                         <h2 data-en="Stay Informed" data-de="Bleiben Sie informiert">Bleiben Sie informiert</h2>
                         <p style="font-size: 1.2rem;" data-en="Get weekly tips on creating sustainable workspaces" data-de="Erhalten Sie wöchentliche Tipps zur Schaffung nachhaltiger Arbeitsplätze">Erhalten Sie wöchentliche Tipps zur Schaffung nachhaltiger Arbeitsplätze</p>
                         <form class="newsletter-form" style="max-width: 500px; margin: 0 auto;">
                             <div class="form-group">
-                                <!-- WCAG Issue: Form without proper labeling -->
+                                
                                 <input type="email" class="form-control" placeholder="Ihre E-Mail-Adresse" required style="display: inline-block; width: 70%; margin-right: 1rem;">
                                 <button type="submit" class="btn btn-primary" style="display: inline-block; width: 25%;">Abonnieren</button>
                             </div>
@@ -290,7 +286,7 @@
         </section>
     </main>
     
-    <!-- Footer -->
+    
     <footer class="footer py-5" style="background: var(--dark-gray); color: white;" role="contentinfo">
         <div class="container">
             <div class="row">
